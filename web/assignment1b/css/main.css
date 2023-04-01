@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+  background-color: #2db83d;
+  padding: 0.1em;
+}
+.navbar .container {
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.1em 1em;
+}
+.navbar .container .title a {
+  text-decoration: none;
+  color: black;
+}
+.navbar .container li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.1em 0.5em;
+}
+.navbar .container li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.text-section {
+  display: flex;
+  margin: auto;
+  width: auto;
+  padding: 1cm 5cm;
+}
+
+.card-section {
+  border: 0;
+  margin: 0;
+  padding-top: 0.5em;
+}
+.card-section .container {
+  display: flex;
+  margin: auto;
+  width: 30cm;
+  padding: 10px;
+}
+.card-section .container .text-holder {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background-color: #ebebeb;
+  width: 9cm;
+  height: 7cm;
+  border: 1px solid rgb(228, 228, 228);
+}
+.card-section .container .text-holder .text-title {
+  font-weight: bold;
+  padding-right: 4em;
+}
+.card-section .container .text-holder p {
+  padding-left: 1.2em;
+  padding-top: 2em;
+  padding-right: 4em;
+}/*# sourceMappingURL=main.css.map */
