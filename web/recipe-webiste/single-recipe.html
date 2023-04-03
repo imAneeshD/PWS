@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>recipes | Simply Recipes</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- nav bar starts -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.svg" alt="logo" />
+          </a>
+          <button type="button" class="btn nav-btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <!--navigation links -->
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="about.html" class="nav-link">ABOUT</a>
+          <a href="tags.html" class="nav-link">TAGS</a>
+          <a href="recipes.html" class="nav-link">RECIPES</a>
+          <div class="nav-link contact-link">
+            <a href="contact.html" class="btn">CONTACT</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- nav bar endss -->
+
+    <!-- main -->
+    <main class="page">
+      <div class="recipe-page">
+        <section class="recipe-hero">
+          <img
+            src="assets/recipes/recipe-4.jpeg"
+            class="img recipe-hero-img"
+            alt="pancakes"
+          />
+          <article>
+            <h2>Banana pancakes</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              quaerat quis aut quo id debitis sit molestias aspernatur
+              doloremque, perferendis repellat eaque at consequatur eveniet nam
+              voluptatem maiores minus itaque? Facere, voluptate. Provident
+              labore eius officiis perspiciatis, consequuntur dolores
+              distinctio.
+            </p>
+
+            <!-- recipe icons starts-->
+            <div class="recipe-icons">
+              <!-- single recipe icons -->
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>Prep Time: 10 mins</h5>
+              </article>
+              <!-- recipe icons ends-->
+              <!-- single recipe icons -->
+              <article>
+                <i class="fas fa-clock"></i>
+                <h5>Cook Time: 10 mins</h5>
+              </article>
+              <!-- recipe icons ends-->
+              <!-- single recipe icons -->
+              <article>
+                <i class="fas fa-user-friends"></i>
+                <h5>Servings: 6</h5>
+              </article>
+              <!-- recipe icons ends-->
+            </div>
+
+            <!-- recipe tags starts -->
+            <div class="recipe-tags">
+              Tags: <a href="tag-template.html">Breakfast</a>
+              <a href="tag-template.html">Cake</a>
+              <a href="tag-template.html">food</a>
+            </div>
+            <!-- recipe tags ends-->
+          </article>
+        </section>
+        <section class="recipe-content">
+          <article>
+            <h4>Instructions</h4>
+             <!-- single instruction -->
+            <div class="single-instruction">
+              <header>
+                <p>step 1</p>
+                <div></div>
+              </header>
+              <p>
+                Lorem, ipsum consectetur dolor sit amet consectetur adipisicing
+                elit. adipisicing Possimus, consectetur dolore.
+              </p>
+            </div>
+            <!-- single instruction -->
+             <!-- single instruction -->
+             <div class="single-instruction">
+              <header>
+                <p>step 2</p>
+                <div></div>
+              </header>
+              <p>
+                Lorem, ipsum consectetur dolor sit amet consectetur adipisicing
+                elit. adipisicing Possimus, consectetur dolore.
+              </p>
+            </div>
+            <!-- single instruction -->
+             <!-- single instruction -->
+             <div class="single-instruction">
+              <header>
+                <p>step 3</p>
+                <div></div>
+              </header>
+              <p>
+                Lorem, ipsum consectetur dolor sit amet consectetur adipisicing
+                elit. adipisicing Possimus, consectetur dolore.
+              </p>
+            </div>
+            <!-- single instruction -->
+          </article>
+          <article class="second-colums">
+            <div>
+              <h4>Ingredients</h4>
+              <p class="single-ingredients">1 1/2 cups dry pancake mix</p>
+              <p class="single-ingredients">4 banans</p>
+              <p class="single-ingredients">1 cup skim milk</p>
+            </div>
+            <div>
+              <h4>tools</h4>
+              <p class="single-tool">Hand blender</p>
+              <p class="single-tool">Large heavy pot with lid</p>
+              <p class="single-tool">Measuring spoons</p>
+              <p class="single-tool">Measuring cups</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <!-- end main -->
+    <footer class="page-footer">
+      <section class="info">
+        <div class="info-left">
+          <p>
+            &copy; <span id="date"></span>
+            <span class="footer-logo">SimpleRecipes</span> Built by
+            <a href="#">Code Builders</a>
+          </p>
+        </div>
+        <div class="info-right">
+          <p>Email: contact@simpleeecipes.com</p>
+          <p>Phone: +91987654321, +919234567288</p>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-snapchat"></a>
+          <a href="#" class="fa fa-whatsapp"></a>
+        </div>
+      </section>
+    </footer>
+    <!-- js file -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
