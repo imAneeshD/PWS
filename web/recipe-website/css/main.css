@@ -600,6 +600,7 @@ font-weight: bold;
 }
 
 .recipe {
+  box-shadow: 10px 10px 5px lightblue;
   display: block;
   background-color: var(--grey-200);
   border-radius: var(--borderRadius);
@@ -751,7 +752,7 @@ font-weight: bold;
 /* tags page */
 
 .for-img {
-  background:url('/PWS/web/recipes/starter/assets/main.jpeg') center/cover no-repeat;
+  background:url("https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center/cover no-repeat;
 
 }
 
@@ -764,6 +765,7 @@ font-weight: bold;
 
 
 .tag {
+  box-shadow: 10px 10px 5px lightblue;
   margin: 1rem 1rem;
   background: var(--grey-500);
   max-width: 100%;
