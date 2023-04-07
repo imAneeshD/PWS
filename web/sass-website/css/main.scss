@@ -1,5 +1,8 @@
 @import 'config';
 
+html {
+    scroll-behavior: smooth;
+  }
 
 body {
 
@@ -36,12 +39,14 @@ body {
     }
 
     .open2 {
+        
         .menu-exit-btn-img{
             height: 30px;
             width: 20px;
         }
+        transition: .4s ;
         display: block;
-        background: $secondaryColor;
+        background: rgb(210, 239, 248);
         position: fixed;
         z-index: 999;
         height: 100vh;
@@ -50,6 +55,7 @@ body {
         top: 0;
         padding: 1rem;
         .nav-links {
+
             display: block;
            
             list-style: none;
@@ -75,9 +81,7 @@ body {
         }
     }
 
-    .open {
-        //display: none;
-    }
+
 
 }
 
@@ -108,7 +112,7 @@ body {
             }
             display: flex;
             justify-content: space-between;
-            width: 40vw;
+            width: 70vw;
             margin: 0;
 
             ul {
@@ -214,6 +218,7 @@ body {
 }
 
 .card-list {
+    padding-bottom: 4rem;
     text-align: center;
     margin: 0;
 

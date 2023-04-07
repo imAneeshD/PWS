@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -29,8 +33,9 @@ body {
   display: none;
 }
 .navbar .open2 {
+  transition: 0.4s;
   display: block;
-  background: #73B8D7;
+  background: rgb(210, 239, 248);
   position: fixed;
   z-index: 999;
   height: 100vh;
@@ -63,6 +68,7 @@ body {
   cursor: pointer;
   height: 35px;
 }
+
 .main .container {
   padding-top: 5rem;
 }
@@ -157,6 +163,7 @@ body {
 }
 
 .card-list {
+  padding-bottom: 4rem;
   text-align: center;
   margin: 0;
 }

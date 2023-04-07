@@ -7,7 +7,6 @@ const nav=document.querySelector('.nav');
 let showMenu=false;
 
 menuBtn.addEventListener('click',()=>{
-    menuBtn.classList.toggle('open');
     nav.classList.toggle('open2');
 });
 
