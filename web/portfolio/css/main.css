@@ -257,11 +257,11 @@ body {
   display: block;
   padding-top: 20%;
   width: 100vw;
-  height: 500%;
+  height: 300%;
 }
 .about-main .text-holder {
   text-align: center;
-  padding: 0 5rem;
+  padding: 0 3rem;
 }
 .about-main .text-holder .bio-text p {
   text-align: start;
