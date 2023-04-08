@@ -84,7 +84,7 @@ body {
   .navbar .nav {
     display: flex;
     justify-content: space-between;
-    width: 40vw;
+    width: 70vw;
     margin: 0;
   }
   .navbar .nav .menu-exit-btn-img {
