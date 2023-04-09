@@ -145,7 +145,7 @@ body {
   }
   .main-content .row .text-holder {
     width: 400px;
-    margin-top: 30rem;
+    margin-top: 25rem;
     margin-left: 25%;
   }
   .main-content .row .text-holder h2,
@@ -165,7 +165,7 @@ body {
   }
   .main-content .row .text-holder {
     width: 400px;
-    margin-top: 30rem;
+    margin-top: 25rem;
     margin-left: 25%;
   }
   .main-content .row .text-holder h2 {
@@ -184,14 +184,14 @@ body {
 }
 @media screen and (min-width: 1250px) {
   .main-content .card-holder {
-    margin: 10rem 14rem;
+    margin: 10rem 8rem;
   }
   .main-content .card-holder .card {
     width: 350px;
     height: 500px;
   }
   .main-content .row .text-holder {
-    width: 700px;
+    width: 500px;
     margin-top: 25rem;
     margin-left: 25%;
   }
@@ -208,6 +208,20 @@ body {
   .main-content .row .text-holder .row p {
     color: black;
     font-size: 20px;
+  }
+}
+@media screen and (min-width: 1620px) {
+  .main-content .card-holder {
+    margin: 10rem 13rem;
+  }
+  .main-content .card-holder .card {
+    width: 350px;
+    height: 500px;
+  }
+  .main-content .row .text-holder {
+    width: 700px;
+    margin-top: 25rem;
+    margin-left: 25%;
   }
 }
 

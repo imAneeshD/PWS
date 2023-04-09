@@ -184,7 +184,7 @@ body {
         .row {
             .text-holder {
                 width: 400px;
-                margin-top: 30rem;
+                margin-top: 25rem;
                 margin-left: 25%;
 
                 h2,
@@ -215,7 +215,7 @@ body {
         .row {
             .text-holder {
                 width: 400px;
-                margin-top: 30rem;
+                margin-top: 25rem;
                 margin-left: 25%;
 
                 h2{
@@ -242,7 +242,7 @@ body {
     @media screen and (min-width:1250px) {
 
         .card-holder {
-            margin: 10rem 14rem;
+            margin: 10rem 8rem;
 
             .card {
                 width: 350px;
@@ -253,7 +253,7 @@ body {
 
         .row {
             .text-holder {
-                width: 700px;
+                width: 500px;
                 margin-top: 25rem;
                 margin-left: 25%;
 
@@ -277,6 +277,25 @@ body {
                         font-size: 20px;
                     }
                 }
+            }
+        }
+    }
+
+    @media screen and (min-width:1620px) {
+        .card-holder {
+            margin: 10rem 13rem;
+
+            .card {
+                width: 350px;
+                height: 500px;
+
+            }
+        }
+        .row {
+            .text-holder {
+                width: 700px;
+                margin-top: 25rem;
+                margin-left: 25%;
             }
         }
     }
