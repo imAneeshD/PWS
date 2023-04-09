@@ -1,30 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" href="css/bootstrap.css">
-  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <script src="js/bootstrap.js"></script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=images, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=images, initial-scale=1.0">
+  <title>Black Badge Ghost</title>
 
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+  <section class="main">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="images"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><img src="images/menu-icon.png" alt=""></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a style="color: white;" class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: white;" class="nav-link" href="#">INSPIRING GREATNESS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                MODELS
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a style="color: rgb(0, 0, 0);" class="dropdown-item"
+                    href="https://www.rolls-roycemotorcars.com/en_GB/showroom/ghost-extended.html">GHOST EXTENDED</a>
+                </li>
+                <li><a style="color: rgb(0, 0, 0);" class="dropdown-item"
+                    href="https://www.rolls-roycemotorcars.com/en_GB/showroom/phantom.html">PHANTOM</a></li>
+                <li><a style="color: rgb(0, 0, 0);" class="dropdown-item"
+                    href="https://www.rolls-roycemotorcars.com/en_GB/showroom/wraith.html">WRAITH</a></li>
+                <li><a style="color: rgb(0, 0, 0);" class="dropdown-item"
+                    href="https://www.rolls-roycemotorcars.com/en_GB/showroom/dawn.html">DAWN</a></li>
+                <li><a style="color: rgb(0, 0, 0);" class="dropdown-item"
+                    href="https://www.rolls-roycemotorcars.com/en_GB/showroom/black-badge.html">BLACK BADGE</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a style="color: rgb(0, 0, 0);" class="dropdown-item" href="#">OTHERS</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a style="color: white;" class="nav-link" href="https://www.rolls-roycemotorcars.com/en_GB/boutique.html"
+                tabindex="-1" aria-disabled="true">BOUTIQUE</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button style="color: white;" class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+
+  <section class="hero-section">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Black <span class="infinity"><img src="images/infinity.svg" alt=""></span> Blade GHOST</h1>
+      </div>
+      <div class="hero-img">
+        <img src="images/car.webp" alt="">
+      </div>
+      <div class="hero-text2">
+        <h2>PURE POWER. PURE DARKNESS.</h2>
+        <p>Black Badge Ghost lives after dark, igniting the rebel within. Powerful, agile, and fearless, it is the most
+          potent manifestation of Rolls-Royce yet — a drive defined by unrelenting force and finesse.</p>
+        <div class="row">
+          <div class="col">
+            <a href="#" class="btn">MAKE AN ENQUIRY</a>
+            <a href="#" class="btn">CONFIGURE YOURS</a>
+          </div>
+        </div>
+
       </div>
     </div>
-  </nav>
+    <section class="section2">
+      <div class="text">
+        <p>WLTP# combined: CO2 emissions: 359 g/km; Fuel consumption: 17.9 mpg / 15.8 l/100km.</p>
+        <div class="video">
+          <video src="video/video1.mp4" autoplay></video>
+        </div>
+      </div>
+      <div class="car-carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/car2.webp" class="d-block w-100" alt="image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/car3.webp" class="d-block w-100" alt="image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/car4.webp" class="d-block w-100" alt="iamge">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="text2">
+        <h2>DOMINATE THE ROAD</h2>
+        <p>More engaging gear ratios, all-wheel drive, and all-wheel steer offer the most responsive and dynamic drive
+          the marque has ever achieved — with the smoothest Magic Carpet Ride sensation imaginable.
+        </p>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/rrlogo.webp" class="d-block w-100" alt="image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/car8.webp" class="d-block w-100" alt="image">
+            </div>
+            <div class="carousel-item">
+              <img src="images/car7.webp" class="d-block w-100" alt="iamge">
+            </div>
+            <div class="carousel-item">
+              <img src="images/car5.webp" class="d-block w-100" alt="iamge">
+            </div>
+          </div>
+        </div>
+        <h2>A DARING TRANSFORMATION</h2>
+        <p>When the purity of Ghost combines with the rebellious aura of Black Badge, an intense metamorphosis takes
+          place. The result is unimaginable — and made for those who dare.</p>
+        <a class="btn" href="#">MAKE AN ENQUIRY</a>
+      </div>
+
+      <div class="text3">
+        <h2>VENTURE THROUGH THE SHADOWS</h2>
+        <p>Reframe your perspective of the path ahead with the Illuminated Grille’s evocative light. Guided through
+          darkened cityscapes, set yourself free with every journey.</p>
+        <img class="text3-img" src="images/f5.webp" alt="image">
+        <h2>FORCEFULLY FORMIDABLE</h2>
+        <p>Unleash the power with the next generation 6.75-litre twin-turbocharged V12, delivering enhanced torque and
+          force unbound. </p>
+        <img src="images/f3.webp" alt="">
+        <h2>DESIGNED TO THRILL
+        </h2>
+        <p>Striking callipers, available in four statement hues, are circled by never-before-seen Carbon Alloy Composite
+          Wheels — completely unique to Black Badge Ghost. </p>
+        <img src="images/f2.webp" alt="image">
+        <img src="images/f4.webp" alt="image">
+        <h2>AN ENDLESS VISION
+        </h2>
+        <p>The Illuminated Fascia is spellbinding. When Black Badge Ghost activates, the Black Badge infinity symbol
+          emerges from the fascia’s void with a mesmerising, starlit display.</p>
+        <img src="images/f1.webp" alt="image">
+        <img src="images/f0.webp" alt="image">
+        <h2>STELLAR SKY ABOVE</h2>
+        <p>Enlivened by motion, the Shooting Star Headliner’s immersive glow transports you to a world of cosmic
+          darkness. </p>
+        <h2>INFINITE POWER</h2>
+        <p>The infinity symbol is an icon of Black Badge. Inlaid by hand between the rear seats, it reminds us of the
+          infinite possibilities that darkness provides.
+        </p>
+        <img src="images/f6.webp" alt="image"><br>
+        <a class="btn" href="#">CONFIGURE YOURS</a>
+      </div>
+    </section>
+
+    <section class="hero2">
+      <div class="overlay">
+        <h5>Black <span class="infinity"><img src="images/infinity.svg" alt="image"></span> Blade GHOST</h5>
+        <h2>MEET THE FAMILY</h2>
+        <a href="#">EXPLORE -></a>
+      </div>
+    </section>
+    <div class="text4">
+      <h2>CONTINUE YOUR JOURNEY</h2>
+      <p>Delve further into stories of Inspiring Greatness.</p>
+    </div>
+
+    <div class="line"></div>
+    <div class="text5">
+      <p>The values of fuel consumptions, CO2 emissions and energy consumptions shown are based on the new WLTP
+        test-cycle
+        and determined according to the European Regulation (EC) 715/2007 in the version applicable at the time of type
+        approval. The figures shown consider optional equipment and the different size of wheels and tyres available on
+        the selected model. Changes of the configuration can lead to changes of the values.</p>
+      <p> vehicle related taxes or other duties based (at least inter alia) on CO2 emissions the CO2 values may differ
+        to
+        the values stated here. They do not relate to any one particular vehicle, nor are they part of any offer made,
+        rather they are solely for the purpose of comparing different kinds of vehicle.</p>
+
+      <p>Further information about the official fuel consumption and the specific CO2 emissions of new passenger cars
+        can
+        be taken out of the "Guide to Fuel Consumption, CO2 Emissions and Electricity Consumption of New Passenger
+        Cars",
+        which is available at all selling points and at https://www.gov.uk/co2-and-vehicle-tax-tools/ in the United
+        Kingdom, https://www.dat.de/co2/ in Germany and or your local government authority.</p>
+
+    </div>
+    <footer>
+      &copy; 2023 RollsRoys - Dev @ pacewisdom
+    </footer>
+  </section>
+
+
 
 </body>
+
 </html>
