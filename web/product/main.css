@@ -23,8 +23,8 @@ body {
 }
 
 .hero-section {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: #000000;
 }
 
@@ -39,7 +39,7 @@ body {
   font-size: 50px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10rem;
+  padding-top: 0;
   color: rgb(212, 211, 211);
   font-weight: bold;
 }
@@ -51,7 +51,7 @@ body {
     font-size: 60px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 4rem;
+    padding-top: 2rem;
     color: rgb(212, 211, 211);
     font-weight: bold;
   }
@@ -124,7 +124,7 @@ body {
   align-items: center;
 }
 .section2 .text {
-  padding: 1rem 2rem;
+  padding: 10% 2rem;
   color: rgb(182, 179, 179);
   margin-left: auto;
   margin-right: auto;
@@ -138,13 +138,14 @@ body {
 @media screen and (min-width: 926px) {
   .section2 {
     text-align: center;
-    margin-top: 40rem;
+    margin-top: 10%;
   }
   .section2 .text {
-    padding: 1rem 5rem;
+    padding: 0 1rem;
     color: rgb(182, 179, 179);
     margin-left: auto;
     margin-right: auto;
+    font-size: 20px;
   }
   .section2 .text .video video {
     padding: 0 1rem;
