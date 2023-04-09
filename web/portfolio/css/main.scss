@@ -51,7 +51,7 @@ body {
     }
 
     .card {
-        margin: 0rem 50%;
+        margin: 0rem 52%;
         background: $primaryColor;
         width: 300px;
         height: 400px;
@@ -79,7 +79,8 @@ body {
             height: 50px;
             bottom: 0;
             margin-top: 1rem;
-            img{
+
+            img {
                 width: 20px;
             }
         }
@@ -92,7 +93,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         background: grey;
-        
+
         height: 1px;
         width: 20%;
     }
@@ -147,6 +148,28 @@ body {
         }
     }
 
+
+    @media screen and (min-width:570px) {
+
+        .card-holder {
+            margin: 10rem 6rem;
+        }
+    }
+
+    @media screen and (min-width:660px) {
+
+        .card-holder {
+            margin: 10rem 7rem;
+        }
+    }
+
+    @media screen and (min-width:820px) {
+
+        .card-holder {
+            margin: 10rem 9rem;
+        }
+    }
+
     @media screen and (min-width:990px) {
 
         .card-holder {
@@ -195,6 +218,13 @@ body {
                 margin-top: 30rem;
                 margin-left: 25%;
 
+                h2{
+                    font-size: 60px;
+                }
+                h5{
+                    font-size: 25px;
+
+                }
                 h2,
                 h5 {
                     color: black;
@@ -212,7 +242,7 @@ body {
     @media screen and (min-width:1250px) {
 
         .card-holder {
-            margin: 10rem 15rem;
+            margin: 10rem 14rem;
 
             .card {
                 width: 350px;
@@ -223,8 +253,8 @@ body {
 
         .row {
             .text-holder {
-                width: 400px;
-                margin-top: 30rem;
+                width: 700px;
+                margin-top: 25rem;
                 margin-left: 25%;
 
                 h2,
@@ -233,7 +263,7 @@ body {
                 }
 
                 h2 {
-                    font-size: 90px;
+                    font-size: 80px;
 
                 }
 
@@ -325,6 +355,7 @@ body {
     }
 
 }
+
 @media screen and (min-width:628px) {
     .main {
         width: 50%;
@@ -346,6 +377,7 @@ body {
     .text-holder {
         text-align: center;
         padding: 0 3rem;
+
         .bio-text {
             p {
                 text-align: start;
@@ -389,9 +421,10 @@ body {
     .about-main {
         padding-top: 10%;
         height: 100vh;
-        .text-holder{
-            .bio-text{
-                p{
+
+        .text-holder {
+            .bio-text {
+                p {
                     padding: 0 20rem;
                 }
             }
@@ -422,14 +455,16 @@ body {
     right: 0;
     padding-bottom: 2rem;
     padding-left: 1rem;
-.social-icons{
-    display: flex;
-    flex-direction: column;
-    img{
-       width: 30px;
-       color: black;
-       padding: .5rem 0;
-       
+
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            width: 30px;
+            color: black;
+            padding: .5rem 0;
+
+        }
     }
-}
 }

@@ -43,7 +43,7 @@ body {
   filter: drop-shadow(1px 1px 1px);
 }
 .main-content .card {
-  margin: 0rem 50%;
+  margin: 0rem 52%;
   background: #E1CBE2;
   width: 300px;
   height: 400px;
@@ -121,6 +121,21 @@ body {
   color: black;
   background: #EDCB9D;
 }
+@media screen and (min-width: 570px) {
+  .main-content .card-holder {
+    margin: 10rem 6rem;
+  }
+}
+@media screen and (min-width: 660px) {
+  .main-content .card-holder {
+    margin: 10rem 7rem;
+  }
+}
+@media screen and (min-width: 820px) {
+  .main-content .card-holder {
+    margin: 10rem 9rem;
+  }
+}
 @media screen and (min-width: 990px) {
   .main-content .card-holder {
     margin: 10rem 7rem;
@@ -153,6 +168,12 @@ body {
     margin-top: 30rem;
     margin-left: 25%;
   }
+  .main-content .row .text-holder h2 {
+    font-size: 60px;
+  }
+  .main-content .row .text-holder h5 {
+    font-size: 25px;
+  }
   .main-content .row .text-holder h2,
   .main-content .row .text-holder h5 {
     color: black;
@@ -163,15 +184,15 @@ body {
 }
 @media screen and (min-width: 1250px) {
   .main-content .card-holder {
-    margin: 10rem 15rem;
+    margin: 10rem 14rem;
   }
   .main-content .card-holder .card {
     width: 350px;
     height: 500px;
   }
   .main-content .row .text-holder {
-    width: 400px;
-    margin-top: 30rem;
+    width: 700px;
+    margin-top: 25rem;
     margin-left: 25%;
   }
   .main-content .row .text-holder h2,
@@ -179,7 +200,7 @@ body {
     color: black;
   }
   .main-content .row .text-holder h2 {
-    font-size: 90px;
+    font-size: 80px;
   }
   .main-content .row .text-holder h5 {
     font-size: 30px;
