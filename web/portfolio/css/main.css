@@ -193,6 +193,7 @@ body {
 .main {
   position: absolute;
   margin: 20% 5%;
+  padding-top: 5%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -206,6 +207,7 @@ body {
 }
 .main .top h1 {
   font-weight: bold;
+  color: #EDCB9D;
 }
 .main .top a {
   background: #EDCB9D;
