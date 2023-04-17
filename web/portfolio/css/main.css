@@ -377,4 +377,8 @@ body {
 }
 .social .social-icons img:hover {
   width: 35px;
+}
+
+.my-cards .my-col {
+  margin: 1rem 3rem;
 }/*# sourceMappingURL=main.css.map */
