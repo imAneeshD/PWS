@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@700&family=Sacramento&family=Satisfy&display=swap');
+
+$primaryColor: #FF7A00;
+$primaryLight: #ff9939;
+$secondarycolor: rgb(255, 242, 233);
+
+body {
+    margin: 0;
+    position: relative;
+    font-family: 'Quattrocento Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+// navbar
+.navbar {
+    img {
+        width: 100px;
+        height: 50px;
+    }
+
+    .collapse {
+        margin-left: 5rem;
+    }
+}
+
+
+// Hero section
+.hero {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+
+    .hero-img {
+        padding: 0;
+
+        .img-2,
+        .img-3 {
+            display: none;
+        }
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    img {
+        width: 400px;
+        height: auto;
+        border: 1px solid $primaryColor;
+        border-radius: 50%;
+        filter: drop-shadow(1px 1px 3px $primaryColor);
+    }
+
+    .hero-text {
+        margin: 2rem .5rem;
+    }
+
+    h1 {
+        color: $primaryColor;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .my-btn {
+        margin-top: 2rem;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        border-radius: 5%;
+        color: $secondarycolor;
+
+        a {
+            border: 1px solid $primaryColor;
+            color: black;
+
+            &:hover {
+                background: $primaryColor;
+                color: black;
+            }
+        }
+    }
+}
+
+// section2
+.section2 {
+    margin-top: 2rem;
+    background: $primaryLight;
+
+
+    h1 {
+        padding: 1rem;
+        color: white;
+    }
+
+    p {
+        padding: .5rem 1rem;
+        margin: 0;
+    }
+
+}
+
+.section3 {
+    h1 {
+        padding: 1rem;
+        font-size: 40px;
+    }
+
+    h2 {
+        color: $primaryColor;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    .my-text {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.section4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+    .carousel {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .offer {
+        p {
+            padding: .5rem;
+            width: 90px;
+            background: red;
+            color: white;
+            border-radius: 10%;
+        }
+    }
+
+    .content {
+        background: whitesmoke;
+    }
+
+    .price {
+        padding: 1rem;
+        margin: 0;
+
+        font-size: 20px;
+
+        .crossed_price {}
+    }
+
+    .emi {
+        padding: 1rem;
+
+        margin: 0;
+
+        span {
+            background: $primaryLight;
+            padding: .2rem .5rem;
+        }
+    }
+
+    .input-group {
+        label {
+            margin: 1rem;
+        }
+    }
+
+    .my-btn-row {
+        padding: 1rem;
+
+    }
+
+    .description {
+        margin: 1rem 0;
+        padding: 1rem;
+        background: whitesmoke;
+    }
+    .specifications{
+        margin: 1rem 0;
+        padding: 1rem;
+        background: whitesmoke;
+    }
+}
+
+
+
+
+
+.last {
+    height: 1rem;
+    padding: 2rem 1rem;
+}
+
+// Footer
+footer {
+    margin-top: 12rem;
+    background: black;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+
+    a,
+    p {
+        margin: 0;
+        color: $secondarycolor;
+        text-decoration: none;
+    }
+}
+
+.line {
+    filter: drop-shadow(1px 1px 3px $primaryColor);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: $primaryLight;
+    width: 40%;
+    height: 2px;
+}
+
+.my-btn-row {
+    text-align: center;
+}
+
+.my-cart-btn,
+.my-buy-btn {
+    background: $primaryColor;
+}
+
+
+@media screen and (min-width:768px) {
+    .hero{
+        h1{
+            font-size: 60px;
+            padding-top: 5rem;
+        }
+        p{
+            font-size: 25px;
+        }
+    }
+
+    .section2{
+        h1,p{
+
+            padding: 1rem 5rem;
+        }
+        h1{
+            font-size: 35px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    .section3{
+        h1{
+            padding: 2rem 5rem;
+        }
+        h2{
+            font-size: 40px;
+        }
+        p{
+            font-size: 25px;
+        }
+    }
+    .section4{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
