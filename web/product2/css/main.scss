@@ -4,6 +4,10 @@ $primaryColor: #FF7A00;
 $primaryLight: #ff9939;
 $secondarycolor: rgb(255, 242, 233);
 
+// *{
+//     border: 1px solid red;
+// }
+
 body {
     margin: 0;
     position: relative;
@@ -14,6 +18,7 @@ body {
 
 // navbar
 .navbar {
+    z-index: 1000;
     img {
         width: 100px;
         height: 50px;
@@ -83,32 +88,71 @@ body {
     }
 }
 
+.scroll-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.scroll-container:before {
+    content: '';
+    display: block;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.scroll-container a {
+    margin: 0 1rem;
+    position: sticky;
+    top: 88vh;
+    cursor: pointer;
+    font-size: 20px;
+    background: $primaryColor;
+    border-radius: 100%;
+    z-index: 999;
+
+    img {
+        width: 20px;
+    }
+}
+
+
 // section2
 .section2 {
     margin-top: 2rem;
     background: $primaryLight;
-
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     h1 {
-        padding: 1rem;
+        padding: 1rem 1rem;
         color: white;
     }
 
     p {
-        padding: .5rem 1rem;
+        padding: 1rem 1rem;
         margin: 0;
     }
 
 }
 
 .section3 {
+    padding: 0 2rem;
+
     h1 {
         padding: 1rem;
-        font-size: 40px;
+        font-size: 50px;
     }
 
     h2 {
         color: $primaryColor;
+    }
+
+    p {
+        text-align: center;
     }
 
     .row {
@@ -116,7 +160,8 @@ body {
     }
 
     img {
-        width: 90%;
+        width: 100%;
+        margin: auto auto;
     }
 
     .my-text {
@@ -157,7 +202,6 @@ body {
 
         font-size: 20px;
 
-        .crossed_price {}
     }
 
     .emi {
@@ -187,7 +231,8 @@ body {
         padding: 1rem;
         background: whitesmoke;
     }
-    .specifications{
+
+    .specifications {
         margin: 1rem 0;
         padding: 1rem;
         background: whitesmoke;
@@ -244,41 +289,68 @@ footer {
 
 
 @media screen and (min-width:768px) {
-    .hero{
-        h1{
+    .hero {
+        h1 {
             font-size: 60px;
             padding-top: 5rem;
         }
-        p{
+
+        p {
             font-size: 25px;
         }
     }
 
-    .section2{
-        h1,p{
+    .section2 {
+        padding-top: 0;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        height: 50vh;
+
+        h1,
+        p {
 
             padding: 1rem 5rem;
         }
-        h1{
+
+        h1 {
             font-size: 35px;
         }
-        p{
+
+        p {
             font-size: 20px;
         }
     }
-    .section3{
-        h1{
+
+    .section3 {
+        padding:0 5rem;
+        h1 {
             padding: 2rem 5rem;
         }
-        h2{
+
+        h2 {
             font-size: 40px;
         }
-        p{
+
+        p {
             font-size: 25px;
         }
     }
-    .section4{
+
+    .section4 {
         margin-left: 5rem;
         margin-right: 5rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    
+
+    .section3{
+        img{
+            width: 100%;
+        }
+        h2{
+            font-size: 70px;
+        }
     }
 }

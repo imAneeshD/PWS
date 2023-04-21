@@ -55,7 +55,8 @@ a {
 }
 
 .btns {
-    margin: 1rem 3rem;
+    margin: 2rem 3rem;
+    padding: 1rem 1rem;
     color: $secondaryColor;
     border: 1px solid $secondaryColor;
 
@@ -177,7 +178,7 @@ a {
                 .hero-text {
                     width: 90%;
                     position: absolute;
-                    top: 100%;
+                    top: 120%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     margin-bottom: 2rem;
@@ -191,10 +192,10 @@ a {
                 margin-left: auto;
                 margin-right: auto;
                 width: 80%;
-                margin-top: 1%;
+                margin-top: 6%;
 
                 .hero-title {
-                    top: 12%;
+                    top: 13%;
 
                     h3 {
                         font-size: 35px;
@@ -206,13 +207,6 @@ a {
                 }
 
                 .hero-text {
-                    width: 90%;
-                    position: absolute;
-                    top: 90%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    margin-bottom: 2rem;
-
                     p {
                         font-size: 20px;
                         padding: 0 5rem;
@@ -223,17 +217,43 @@ a {
         }
     }
 }
-
+.overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 img {
     width: 100%;
 }
 
+
+.fea{
+    .fea-text{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}
+
+.fea-last{
+    .fea-text{
+        text-align: left;
+        padding: 0 5%;
+
+    }
+}
 .video {
-    margin-top: 6rem;
+    margin: 2rem;
+    padding: 1rem 0;
     text-align: center;
 
     video {
         width: 90%;
+    }
+    p{
+        margin: 3rem 0;
     }
 
     @media screen and (min-width:1000px) {
@@ -246,7 +266,7 @@ img {
 @media screen and (min-width:1250px) {
 
     .video {
-        margin-top: 0rem;
+        margin-top: 15rem;
         video{
             width: 80%;
         }
@@ -254,9 +274,13 @@ img {
 }
 
 .carousel-text {
-    margin: 1rem 0;
-    padding: 0 .5rem;
-    text-align: center;
+    margin: 3rem 0;
+    padding: 0 15%;
+    text-align: left;
+    p{
+        text-align: left;
+        margin: 0;
+    }
 }
 
 @media screen and (min-width:1250px) {
@@ -266,16 +290,26 @@ img {
     width: 80%;
 }
 
+.carousel-text {
+    padding: 0 20%;
+}
+
 }
 
 .fea {
     text-align: center;
-    padding: 0 2rem;
+    padding: 0 15%;
+
 }
 
 .my-btn {
     text-align: center;
+    width: 98%;
+    .row{
+        padding: 0;
+    }
 }
+
 
 .foot-img {
     background: url(../images/backgroud1.webp) center/cover no-repeat;
@@ -287,6 +321,9 @@ img {
         height: 100%;
         padding-top: 50%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         h5,
         h2 {
@@ -313,17 +350,37 @@ img {
 .fea-last {
     text-align: center;
     padding: 1rem 2rem;
+    .fea-text{
+        padding: 0 10%;
+    }
 }
 
 .foot-text {
-    padding: 0 1rem;
+    background: rgb(27, 27, 27);
+    padding: 0 3rem;
+    padding-top: 2rem;
+    p{
+        font-size: 14px;
+    }
 }
 
-footer {
-    background: $secondaryColor;
+footer {    
+    background: rgb(27, 27, 27);
 
-    p {
+    .list{
+        padding: 1rem 1rem;
+    }
+    p ,ul{
+        padding: 0rem;
+        list-style-type: none;
+        color: $secondaryColor;
         margin: 0;
+        li{
+            padding: .5rem;
+        }
+        a{
+            color: $secondaryColor;
+        }
     }
 }
 
@@ -332,10 +389,14 @@ footer {
     .fea {
         margin-top: 5rem;
         display: flex;
+        justify-content: center;
+        align-items: center;
 
         .fea-text {
-            padding-top: 4rem;
-            width: 40%;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 70%;
+            
         }
 
         img {
@@ -360,6 +421,7 @@ footer {
             height: 100%;
             padding-top: 0;
             text-align: center;
+       
 
             h5 {
                 font-size: 20px;
@@ -393,15 +455,43 @@ footer {
 
 
     .foot-text {
-        padding: 0 3rem;
+        padding: 0 10%;
+        display: flex;
+        p{
+            padding: 1rem 2rem;
+            font-size: 14px;
+        }
+        .text2{
+            margin: 0;
+        }
     }
 
-    footer {
-        text-align: center;
-        background: $secondaryColor;
 
-        p {
+    footer {
+        text-align: left;
+
+        p ,ul{
+            padding: 2rem;
+            list-style-type: none;
+            color: $secondaryColor;
             margin: 0;
+            li{
+                padding: .5rem;
+            }
+            a{
+                color: $secondaryColor;
+            }
+        }
+    }
+}
+
+
+.social{
+    .container{
+        text-align: center;
+        a{
+            margin-top: 1rem;
+            padding: 0 1rem;
         }
     }
 }

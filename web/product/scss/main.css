@@ -27,7 +27,8 @@ a:hover {
 }
 
 .btns {
-  margin: 1rem 3rem;
+  margin: 2rem 3rem;
+  padding: 1rem 1rem;
   color: white;
   border: 1px solid white;
 }
@@ -131,7 +132,7 @@ a:hover {
   .hero-0 .hero-1 .hero-img .hero-text {
     width: 90%;
     position: absolute;
-    top: 100%;
+    top: 120%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-bottom: 2rem;
@@ -142,10 +143,10 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    margin-top: 1%;
+    margin-top: 6%;
   }
   .hero-0 .hero-1 .hero-img .hero-title {
-    top: 12%;
+    top: 13%;
   }
   .hero-0 .hero-1 .hero-img .hero-title h3 {
     font-size: 35px;
@@ -153,30 +154,44 @@ a:hover {
   .hero-0 .hero-1 .hero-img .hero-title h1 {
     font-size: 150px;
   }
-  .hero-0 .hero-1 .hero-img .hero-text {
-    width: 90%;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-bottom: 2rem;
-  }
   .hero-0 .hero-1 .hero-img .hero-text p {
     font-size: 20px;
     padding: 0 5rem;
   }
 }
 
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 img {
   width: 100%;
 }
 
+.fea .fea-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fea-last .fea-text {
+  text-align: left;
+  padding: 0 5%;
+}
+
 .video {
-  margin-top: 6rem;
+  margin: 2rem;
+  padding: 1rem 0;
   text-align: center;
 }
 .video video {
   width: 90%;
+}
+.video p {
+  margin: 3rem 0;
 }
 @media screen and (min-width: 1000px) {
   .video p {
@@ -186,16 +201,20 @@ img {
 
 @media screen and (min-width: 1250px) {
   .video {
-    margin-top: 0rem;
+    margin-top: 15rem;
   }
   .video video {
     width: 80%;
   }
 }
 .carousel-text {
-  margin: 1rem 0;
-  padding: 0 0.5rem;
-  text-align: center;
+  margin: 3rem 0;
+  padding: 0 15%;
+  text-align: left;
+}
+.carousel-text p {
+  text-align: left;
+  margin: 0;
 }
 
 @media screen and (min-width: 1250px) {
@@ -204,14 +223,21 @@ img {
     margin-right: auto;
     width: 80%;
   }
+  .carousel-text {
+    padding: 0 20%;
+  }
 }
 .fea {
   text-align: center;
-  padding: 0 2rem;
+  padding: 0 15%;
 }
 
 .my-btn {
   text-align: center;
+  width: 98%;
+}
+.my-btn .row {
+  padding: 0;
 }
 
 .foot-img {
@@ -224,6 +250,9 @@ img {
   height: 100%;
   padding-top: 50%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .foot-img .overlay h5,
 .foot-img .overlay h2 {
@@ -246,26 +275,49 @@ img {
   text-align: center;
   padding: 1rem 2rem;
 }
+.fea-last .fea-text {
+  padding: 0 10%;
+}
 
 .foot-text {
-  padding: 0 1rem;
+  background: rgb(27, 27, 27);
+  padding: 0 3rem;
+  padding-top: 2rem;
+}
+.foot-text p {
+  font-size: 14px;
 }
 
 footer {
-  background: white;
+  background: rgb(27, 27, 27);
 }
-footer p {
+footer .list {
+  padding: 1rem 1rem;
+}
+footer p, footer ul {
+  padding: 0rem;
+  list-style-type: none;
+  color: white;
   margin: 0;
+}
+footer p li, footer ul li {
+  padding: 0.5rem;
+}
+footer p a, footer ul a {
+  color: white;
 }
 
 @media screen and (min-width: 1000px) {
   .fea {
     margin-top: 5rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .fea .fea-text {
-    padding-top: 4rem;
-    width: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
   }
   .fea img {
     width: 50%;
@@ -307,13 +359,36 @@ footer p {
     width: 60px;
   }
   .foot-text {
-    padding: 0 3rem;
+    padding: 0 10%;
+    display: flex;
   }
-  footer {
-    text-align: center;
-    background: white;
+  .foot-text p {
+    padding: 1rem 2rem;
+    font-size: 14px;
   }
-  footer p {
+  .foot-text .text2 {
     margin: 0;
   }
+  footer {
+    text-align: left;
+  }
+  footer p, footer ul {
+    padding: 2rem;
+    list-style-type: none;
+    color: white;
+    margin: 0;
+  }
+  footer p li, footer ul li {
+    padding: 0.5rem;
+  }
+  footer p a, footer ul a {
+    color: white;
+  }
+}
+.social .container {
+  text-align: center;
+}
+.social .container a {
+  margin-top: 1rem;
+  padding: 0 1rem;
 }/*# sourceMappingURL=main.css.map */
