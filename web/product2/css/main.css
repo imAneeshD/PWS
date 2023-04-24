@@ -8,6 +8,7 @@ body {
 }
 
 .navbar {
+  background: white;
   z-index: 1000;
 }
 .navbar img {

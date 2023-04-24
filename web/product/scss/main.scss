@@ -19,6 +19,7 @@ body {
 
 }
 
+
 a {
     text-decoration: none;
     color: $secondaryColor;
@@ -28,9 +29,15 @@ a {
     }
 }
 
-
+li {
+    cursor: pointer;
+}
 
 .navbar {
+
+    .exit{
+        display: none;
+    }
 
     img,
     span {
@@ -38,33 +45,52 @@ a {
     }
 
     .container-fluid {
-        .collapse {
-            ul {
-                li {
-                    a {
-                        color: $secondaryColor;
+        padding: 0;
 
-                        &:hover {
-                            color: $hoverColor;
-                        }
+        .navbar-brand {
+            margin: 0;
+        }
+
+        .collapse {
+
+            .navbar-nav{
+                .nav-item{
+                    .nav-link{
+                            color: rgb(255, 255, 255);
+                            &:hover{
+                                color: $hoverColor;
+                            }
                     }
+                    // .active{
+                    //     color: red;
+                    // }
+
                 }
             }
         }
     }
 }
 
-.btns {
-    margin: 2rem 3rem;
-    padding: 1rem 1rem;
-    color: $secondaryColor;
-    border: 1px solid $secondaryColor;
 
+
+
+
+
+
+.btns {
+    margin: 1rem 3rem;
+    padding: 1rem .5rem;
+    color: $secondaryColor;
+    border: .1px solid $secondaryColor;
+    border-radius: 50px;
+    width: 250px;
+    font-size: 14px;
+    letter-spacing: .1rem;
 
     &:hover {
-        color: $primaryColor;
-        border: 1px solid $hoverColor;
-        background: $hoverColor;
+        color: $hoverColor;
+        border: .1px solid $hoverColor;
+
     }
 }
 
@@ -73,9 +99,10 @@ a {
     filter: drop-shadow(1px 1px 3px);
     width: 30%;
     height: 2px;
-    margin-inline: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .hero-0 {
@@ -217,42 +244,53 @@ a {
         }
     }
 }
-.overlay{
+
+.my-carousel {}
+
+.overlay {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 img {
     width: 100%;
 }
 
+h1 {
+    color: rgb(255, 255, 255);
+}
 
-.fea{
-    .fea-text{
+.fea {
+    .fea-text {
+        padding-top: 2rem;
         text-align: left;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
+
     }
 }
 
-.fea-last{
-    .fea-text{
+.fea-last {
+    .fea-text {
         text-align: left;
         padding: 0 5%;
 
     }
 }
+
 .video {
     margin: 2rem;
     padding: 1rem 0;
     text-align: center;
 
     video {
-        width: 90%;
+        width: 100%;
     }
-    p{
+
+    p {
         margin: 3rem 0;
     }
 
@@ -267,47 +305,61 @@ img {
 
     .video {
         margin-top: 15rem;
-        video{
+
+        video {
             width: 80%;
         }
     }
 }
 
 .carousel-text {
+    text-align: center;
     margin: 3rem 0;
-    padding: 0 15%;
-    text-align: left;
-    p{
-        text-align: left;
+    padding: 0 5%;
+
+    p {
         margin: 0;
+    }
+
+    h1 {
+        padding-top: 3rem;
     }
 }
 
 @media screen and (min-width:1250px) {
-.carousel{
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-}
+    .carousel {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
 
-.carousel-text {
-    padding: 0 20%;
-}
+    .carousel-text {
+        padding: 0 20%;
+    }
 
 }
 
 .fea {
     text-align: center;
-    padding: 0 15%;
+    padding: 0 5%;
 
 }
+
+
+
+
 
 .my-btn {
     text-align: center;
     width: 98%;
-    .row{
+    display: flex;
+    justify-content: center;
+
+    .row {
         padding: 0;
+        width: 100%;
     }
+
 }
 
 
@@ -335,7 +387,7 @@ img {
             font-weight: bold;
         }
     }
-    
+
     @media screen and (min-width:710px) {
         .overlay {
             padding-top: 10%;
@@ -349,36 +401,47 @@ img {
 
 .fea-last {
     text-align: center;
-    padding: 1rem 2rem;
-    .fea-text{
-        padding: 0 10%;
+    padding: 1rem 5%;
+
+    .fea-text {
+        padding: 0 0;
     }
 }
 
 .foot-text {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
     background: rgb(27, 27, 27);
-    padding: 0 3rem;
+    padding: 0 1.5rem;
     padding-top: 2rem;
-    p{
-        font-size: 14px;
+
+    p {
+        font-size: 16px;
     }
 }
 
-footer {    
+footer {
     background: rgb(27, 27, 27);
 
-    .list{
+    .list {
         padding: 1rem 1rem;
     }
-    p ,ul{
+
+    p,
+    ul {
         padding: 0rem;
         list-style-type: none;
         color: $secondaryColor;
         margin: 0;
-        li{
+
+        li {
             padding: .5rem;
         }
-        a{
+
+        a {
             color: $secondaryColor;
         }
     }
@@ -395,8 +458,9 @@ footer {
         .fea-text {
             margin-top: auto;
             margin-bottom: auto;
-            width: 70%;
-            
+            width: 100%;
+            padding: 3rem;
+
         }
 
         img {
@@ -421,7 +485,7 @@ footer {
             height: 100%;
             padding-top: 0;
             text-align: center;
-       
+
 
             h5 {
                 font-size: 20px;
@@ -455,30 +519,39 @@ footer {
 
 
     .foot-text {
+
+        .container {
+            flex-direction: row;
+        }
+
         padding: 0 10%;
         display: flex;
-        p{
+
+        p {
             padding: 1rem 2rem;
             font-size: 14px;
         }
-        .text2{
+
+        .text2 {
             margin: 0;
         }
     }
 
-
     footer {
         text-align: left;
 
-        p ,ul{
+        p,
+        ul {
             padding: 2rem;
             list-style-type: none;
             color: $secondaryColor;
             margin: 0;
-            li{
+
+            li {
                 padding: .5rem;
             }
-            a{
+
+            a {
                 color: $secondaryColor;
             }
         }
@@ -486,12 +559,125 @@ footer {
 }
 
 
-.social{
-    .container{
+.social {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    .container {
         text-align: center;
-        a{
+        margin-bottom: 1rem;
+
+        a {
             margin-top: 1rem;
+            margin-bottom: 1rem;
             padding: 0 1rem;
         }
+    }
+}
+
+
+//contact page
+.contact {
+    .contact-hero {
+        background: url(../images/contact-hero.webp) right/cover no-repeat;
+        height: 100vh;
+
+
+        .text {
+            color: white;
+            font-size: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media screen and (min-width:1200px) {
+            background: url(../images/contact-hero2.webp) center/cover no-repeat;
+
+            .text {
+                font-size: 5rem;
+            }
+        }
+
+
+        .fa {
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+        }
+    }
+
+    .c-section1 {
+        background: #1e002a;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .container {
+            margin: 4rem 0;
+
+            h2 {
+                color: white;
+            }
+
+            a {
+                margin: 2rem 0;
+            }
+        }
+
+        .line {
+            height: .5px;
+            width: 100%;
+            opacity: .5;
+            margin: 0;
+        }
+
+        .form {
+            .my-input{
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            .my-input,
+            textarea {
+                margin-top: 2rem;
+                width: 70%;
+                color: white;
+                background: #1c0425;
+                border: none;
+                border-bottom: 2px solid grey;
+            }
+
+            ul {
+                padding: 0 5rem;
+            }
+
+            li {
+                text-align: start;
+                list-style-type: disc;
+            }
+            .row{
+                .col{
+                    p{
+                        padding: 0 4rem;
+                        text-align: start;
+                    }
+                }
+            }
+    
+            .form-check-label{
+                padding: 0 2.5rem;
+                text-align: start;
+            }
+
+        }
+
     }
 }

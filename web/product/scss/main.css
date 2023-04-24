@@ -15,27 +15,43 @@ a:hover {
   color: rgb(0, 203, 253);
 }
 
+li {
+  cursor: pointer;
+}
+
+.navbar .exit {
+  display: none;
+}
 .navbar img,
 .navbar span {
   width: 40px;
 }
-.navbar .container-fluid .collapse ul li a {
-  color: white;
+.navbar .container-fluid {
+  padding: 0;
 }
-.navbar .container-fluid .collapse ul li a:hover {
+.navbar .container-fluid .navbar-brand {
+  margin: 0;
+}
+.navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+  color: rgb(255, 255, 255);
+}
+.navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link:hover {
   color: rgb(0, 203, 253);
 }
 
 .btns {
-  margin: 2rem 3rem;
-  padding: 1rem 1rem;
+  margin: 1rem 3rem;
+  padding: 1rem 0.5rem;
   color: white;
-  border: 1px solid white;
+  border: 0.1px solid white;
+  border-radius: 50px;
+  width: 250px;
+  font-size: 14px;
+  letter-spacing: 0.1rem;
 }
 .btns:hover {
-  color: black;
-  border: 1px solid rgb(0, 203, 253);
-  background: rgb(0, 203, 253);
+  color: rgb(0, 203, 253);
+  border: 0.1px solid rgb(0, 203, 253);
 }
 
 .line {
@@ -43,9 +59,10 @@ a:hover {
   filter: drop-shadow(1px 1px 3px);
   width: 30%;
   height: 2px;
-  margin-inline: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .hero-0 {
@@ -170,7 +187,12 @@ img {
   width: 100%;
 }
 
+h1 {
+  color: rgb(255, 255, 255);
+}
+
 .fea .fea-text {
+  padding-top: 2rem;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -188,7 +210,7 @@ img {
   text-align: center;
 }
 .video video {
-  width: 90%;
+  width: 100%;
 }
 .video p {
   margin: 3rem 0;
@@ -208,13 +230,15 @@ img {
   }
 }
 .carousel-text {
+  text-align: center;
   margin: 3rem 0;
-  padding: 0 15%;
-  text-align: left;
+  padding: 0 5%;
 }
 .carousel-text p {
-  text-align: left;
   margin: 0;
+}
+.carousel-text h1 {
+  padding-top: 3rem;
 }
 
 @media screen and (min-width: 1250px) {
@@ -229,15 +253,18 @@ img {
 }
 .fea {
   text-align: center;
-  padding: 0 15%;
+  padding: 0 5%;
 }
 
 .my-btn {
   text-align: center;
   width: 98%;
+  display: flex;
+  justify-content: center;
 }
 .my-btn .row {
   padding: 0;
+  width: 100%;
 }
 
 .foot-img {
@@ -273,19 +300,23 @@ img {
 
 .fea-last {
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 1rem 5%;
 }
 .fea-last .fea-text {
-  padding: 0 10%;
+  padding: 0 0;
 }
 
 .foot-text {
   background: rgb(27, 27, 27);
-  padding: 0 3rem;
+  padding: 0 1.5rem;
   padding-top: 2rem;
 }
+.foot-text .container {
+  display: flex;
+  flex-direction: column;
+}
 .foot-text p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 footer {
@@ -294,16 +325,19 @@ footer {
 footer .list {
   padding: 1rem 1rem;
 }
-footer p, footer ul {
+footer p,
+footer ul {
   padding: 0rem;
   list-style-type: none;
   color: white;
   margin: 0;
 }
-footer p li, footer ul li {
+footer p li,
+footer ul li {
   padding: 0.5rem;
 }
-footer p a, footer ul a {
+footer p a,
+footer ul a {
   color: white;
 }
 
@@ -317,7 +351,8 @@ footer p a, footer ul a {
   .fea .fea-text {
     margin-top: auto;
     margin-bottom: auto;
-    width: 70%;
+    width: 100%;
+    padding: 3rem;
   }
   .fea img {
     width: 50%;
@@ -362,6 +397,9 @@ footer p a, footer ul a {
     padding: 0 10%;
     display: flex;
   }
+  .foot-text .container {
+    flex-direction: row;
+  }
   .foot-text p {
     padding: 1rem 2rem;
     font-size: 14px;
@@ -372,23 +410,111 @@ footer p a, footer ul a {
   footer {
     text-align: left;
   }
-  footer p, footer ul {
+  footer p,
+  footer ul {
     padding: 2rem;
     list-style-type: none;
     color: white;
     margin: 0;
   }
-  footer p li, footer ul li {
+  footer p li,
+  footer ul li {
     padding: 0.5rem;
   }
-  footer p a, footer ul a {
+  footer p a,
+  footer ul a {
     color: white;
   }
 }
+.social {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 .social .container {
   text-align: center;
+  margin-bottom: 1rem;
 }
 .social .container a {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 0 1rem;
+}
+
+.contact .contact-hero {
+  background: url(../images/contact-hero.webp) right/cover no-repeat;
+  height: 100vh;
+}
+.contact .contact-hero .text {
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1200px) {
+  .contact .contact-hero {
+    background: url(../images/contact-hero2.webp) center/cover no-repeat;
+  }
+  .contact .contact-hero .text {
+    font-size: 5rem;
+  }
+}
+.contact .contact-hero .fa {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.contact .c-section1 {
+  background: #1e002a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact .c-section1 .container {
+  margin: 4rem 0;
+}
+.contact .c-section1 .container h2 {
+  color: white;
+}
+.contact .c-section1 .container a {
+  margin: 2rem 0;
+}
+.contact .c-section1 .line {
+  height: 0.5px;
+  width: 100%;
+  opacity: 0.5;
+  margin: 0;
+}
+.contact .c-section1 .form .my-input:focus {
+  outline: none;
+}
+.contact .c-section1 .form .my-input,
+.contact .c-section1 .form textarea {
+  margin-top: 2rem;
+  width: 70%;
+  color: white;
+  background: #1c0425;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+.contact .c-section1 .form ul {
+  padding: 0 5rem;
+}
+.contact .c-section1 .form li {
+  text-align: start;
+  list-style-type: disc;
+}
+.contact .c-section1 .form .row .col p {
+  padding: 0 4rem;
+  text-align: start;
+}
+.contact .c-section1 .form .form-check-label {
+  padding: 0 2.5rem;
+  text-align: start;
 }/*# sourceMappingURL=main.css.map */
