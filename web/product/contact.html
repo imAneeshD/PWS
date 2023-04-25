@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css"
         integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw=="
@@ -23,12 +24,12 @@
         <div class="container">
             <nav class="navbar  navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="image"></a>
+                    <a class="navbar-brand" href="index.html"><img class="animate__animated animate__zoomIn" src="images/logo.svg" alt="image"></a>
                     <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span id="exit"><img src="./images/menu-icon.png" alt="menu-icon"></span>
-                        <span id="menu" class="exit"><i style="color: white;" class="fa fa-xmark"></i></span>
+                        <span id="exit"><img class="animate__animated animate__fadeIn" src="./images/menu-icon.png" alt="menu-icon"></span>
+                        <span id="menu" class="exit"><i style="color: white;" class="fa fa-xmark animate__animated animate__rotateIn "></i></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -37,7 +38,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                    href="https://www.rolls-roycemotorcars.com/en_GB/inspiring-greatness.html">INSPIRING
+                                    href="//www.rolls-roycemotorcars.com/en_GB/inspiring-greatness.html">INSPIRING
                                     GREATNESS</a>
                             </li>
                             <li class="nav-item dropdown">
@@ -47,19 +48,19 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a style="color:black" class="dropdown-item"
-                                            href="https://www.rolls-roycemotorcars.com/en_GB/showroom/ghost-extended.html">GHOST
+                                            href="//www.rolls-roycemotorcars.com/en_GB/showroom/ghost-extended.html">GHOST
                                             EXTENDE</a></li>
                                     <li><a style="color:black" class="dropdown-item"
-                                            href="https://www.rolls-roycemotorcars.com/en_GB/showroom/phantom.html">PHANTOM</a>
+                                            href="//www.rolls-roycemotorcars.com/en_GB/showroom/phantom.html">PHANTOM</a>
                                     </li>
                                     <li><a style="color:black" class="dropdown-item"
-                                            href="https://www.rolls-roycemotorcars.com/en_GB/showroom/wraith.html">WRAITH</a>
+                                            href="//www.rolls-roycemotorcars.com/en_GB/showroom/wraith.html">WRAITH</a>
                                     </li>
                                     <li><a style="color:black" class="dropdown-item"
-                                            href="https://www.rolls-roycemotorcars.com/en_GB/showroom/dawn.html">DAWN</a>
+                                            href="//www.rolls-roycemotorcars.com/en_GB/showroom/dawn.html">DAWN</a>
                                     </li>
                                     <li><a style="color:black" class="dropdown-item"
-                                            href="https://www.rolls-roycemotorcars.com/en_GB/showroom/black-badge.html">BLACK
+                                            href="//www.rolls-roycemotorcars.com/en_GB/showroom/black-badge.html">BLACK
                                             BLADE</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
@@ -69,7 +70,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                    href="https://www.rolls-roycemotorcars.com/en_GB/bespoke/discover.html">BESPOKE</a>
+                                    href="//www.rolls-roycemotorcars.com/en_GB/bespoke/discover.html">BESPOKE</a>
                             </li>
                         </ul>
                         <form class="d-flex">
@@ -90,8 +91,8 @@
                 </div>
             </div>
         </div>
-        <section id="section1" class="c-section1">
-            <div class="container container-fluid">
+        <section  id="section1" class="c-section1">
+            <div data-aos="zoom-in" class="container container-fluid">
                 <h2>ASK US A QUESTION</h2>
                 <a href="#form" class="btn btns">CONTACT US</a>
             </div>
@@ -121,7 +122,8 @@
 
             <div id="form" class="form container">
                 <h2>REQUEST INFORMATION</h2>
-                <div class="inputs">
+                <div data-aos="fade-up"
+                data-aos-duration="1000"  class="inputs">
                     <div class="mb-3">
                         <input type="text" class="my-input" name="title" id="" placeholder="Title">
                     </div>
@@ -168,7 +170,7 @@
 
         </section>
 
-        <footer>
+        <footer >
             <hr style="margin: 0;">
             <div class="container container-fluid">
                 <div class="list">
@@ -222,6 +224,10 @@
         </footer>
     </div>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

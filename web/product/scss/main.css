@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100&family=Paytone+One&family=Poppins:ital,wght@0,500;0,600;1,400;1,500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: black;
@@ -24,7 +28,19 @@ li {
 }
 .navbar img,
 .navbar span {
-  width: 40px;
+  width: 30px;
+}
+@media screen and (min-width: 450px) {
+  .navbar img,
+  .navbar span {
+    width: 30px;
+  }
+}
+@media screen and (min-width: 450px) {
+  .navbar img,
+  .navbar span {
+    width: 40px;
+  }
 }
 .navbar .container-fluid {
   padding: 0;
@@ -40,7 +56,7 @@ li {
 }
 
 .btns {
-  margin: 1rem 3rem;
+  margin: 2% 3rem;
   padding: 1rem 0.5rem;
   color: white;
   border: 0.1px solid white;
@@ -57,12 +73,9 @@ li {
 .line {
   background: rgb(168, 168, 168);
   filter: drop-shadow(1px 1px 3px);
-  width: 30%;
+  width: 85%;
   height: 2px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin: 1.5rem auto;
 }
 
 .hero-0 {
@@ -146,6 +159,12 @@ li {
   .hero-0 .hero-1 .hero-img .hero-title {
     top: 10%;
   }
+  .hero-0 .hero-1 .hero-img .hero-title h3 {
+    font-size: 35px;
+  }
+  .hero-0 .hero-1 .hero-img .hero-title h1 {
+    font-size: 110px;
+  }
   .hero-0 .hero-1 .hero-img .hero-text {
     width: 90%;
     position: absolute;
@@ -192,28 +211,43 @@ h1 {
 }
 
 .fea .fea-text {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (max-width: 1000px) {
+  .fea {
+    display: flex;
+    flex-direction: column;
+  }
+  .fea .fea-text {
+    order: 1;
+  }
+  .fea img {
+    margin: 1.5rem 0;
+    order: 2;
+  }
+}
 
 .fea-last .fea-text {
   text-align: left;
-  padding: 0 5%;
+  padding: 0 1.5rem;
 }
 
 .video {
-  margin: 2rem;
-  padding: 1rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  margin-inline: 0;
   text-align: center;
 }
 .video video {
+  margin: 0;
   width: 100%;
 }
 .video p {
-  margin: 3rem 0;
+  margin: 1.5rem 0;
 }
 @media screen and (min-width: 1000px) {
   .video p {
@@ -221,24 +255,25 @@ h1 {
   }
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1050px) {
   .video {
     margin-top: 15rem;
+    padding-top: 5%;
   }
   .video video {
-    width: 80%;
+    width: 100%;
   }
 }
 .carousel-text {
   text-align: center;
-  margin: 3rem 0;
-  padding: 0 5%;
+  margin: 1.5rem 0;
+  padding: 0 1.5rem;
 }
 .carousel-text p {
   margin: 0;
 }
 .carousel-text h1 {
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 }
 
 @media screen and (min-width: 1250px) {
@@ -253,7 +288,7 @@ h1 {
 }
 .fea {
   text-align: center;
-  padding: 0 5%;
+  padding: 0 1.5rem;
 }
 
 .my-btn {
@@ -268,26 +303,20 @@ h1 {
 }
 
 .foot-img {
+  margin-top: 1.5rem;
   background: url(../images/backgroud1.webp) center/cover no-repeat;
   width: 100%;
-  height: 500px;
+  height: 50vh;
 }
 .foot-img .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
-  padding-top: 50%;
+  padding-top: 1%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.foot-img .overlay h5,
-.foot-img .overlay h2 {
   color: white;
-}
-.foot-img .overlay .link {
-  color: white;
-  font-weight: bold;
 }
 @media screen and (min-width: 710px) {
   .foot-img .overlay {
@@ -300,7 +329,7 @@ h1 {
 
 .fea-last {
   text-align: center;
-  padding: 1rem 5%;
+  padding: 1rem 1.5rem;
 }
 .fea-last .fea-text {
   padding: 0 0;
@@ -308,8 +337,7 @@ h1 {
 
 .foot-text {
   background: rgb(27, 27, 27);
-  padding: 0 1.5rem;
-  padding-top: 2rem;
+  padding: 1.5rem 1.5rem;
 }
 .foot-text .container {
   display: flex;
@@ -323,7 +351,7 @@ footer {
   background: rgb(27, 27, 27);
 }
 footer .list {
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
 }
 footer p,
 footer ul {
@@ -343,7 +371,7 @@ footer ul a {
 
 @media screen and (min-width: 1000px) {
   .fea {
-    margin-top: 5rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -363,14 +391,9 @@ footer ul a {
   }
   .foot-img {
     background: url(../images/backgroud1.webp) center/cover no-repeat;
-    width: 100%;
-    height: 500px;
   }
   .foot-img .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100%;
     padding-top: 0;
-    text-align: center;
   }
   .foot-img .overlay h5 {
     font-size: 20px;
@@ -394,7 +417,7 @@ footer ul a {
     width: 60px;
   }
   .foot-text {
-    padding: 0 10%;
+    padding: 2% 10%;
     display: flex;
   }
   .foot-text .container {
@@ -402,7 +425,7 @@ footer ul a {
   }
   .foot-text p {
     padding: 1rem 2rem;
-    font-size: 14px;
+    font-size: 16px;
   }
   .foot-text .text2 {
     margin: 0;
@@ -412,7 +435,7 @@ footer ul a {
   }
   footer p,
   footer ul {
-    padding: 2rem;
+    padding: 0;
     list-style-type: none;
     color: white;
     margin: 0;
@@ -434,7 +457,7 @@ footer ul a {
 }
 .social .container {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .social .container a {
   margin-top: 1rem;

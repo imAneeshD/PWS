@@ -2,9 +2,15 @@
 <html lang="en">
 
 <head>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/bootstrap.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css"
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css"
         integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
@@ -13,19 +19,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Blade Ghost</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css'>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css'>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="image"></a>
+                <a class="navbar-brand" href="index.html"><img class="animate__animated animate__zoomIn"
+                        src="images/logo.svg" alt="image"></a>
                 <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span id="exit" ><img src="./images/menu-icon.png" alt="menu-icon"></span>
-                    <span id="menu" class="exit"><i style="color: white;" class="fa fa-xmark"></i></span>
+                    <span id="exit"><img class="animate__animated animate__fadeIn" src="./images/menu-icon.png"
+                            alt="menu-icon"></span>
+                    <span id="menu" class="exit"><i style="color: white;"
+                            class="fa fa-xmark animate__animated animate__rotateIn "></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -34,7 +44,7 @@
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link"
-                                href="https://www.rolls-roycemotorcars.com/en_GB/inspiring-greatness.html">INSPIRING
+                                href="//www.rolls-roycemotorcars.com/en_GB/inspiring-greatness.html">INSPIRING
                                 GREATNESS</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -44,19 +54,19 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a style="color:rgb(0, 0, 0)" class="dropdown-item"
-                                        href="https://www.rolls-roycemotorcars.com/en_GB/showroom/ghost-extended.html">GHOST
+                                        href="//www.rolls-roycemotorcars.com/en_GB/showroom/ghost-extended.html">GHOST
                                         EXTENDE</a></li>
                                 <li><a style="color:black" class="dropdown-item"
-                                        href="https://www.rolls-roycemotorcars.com/en_GB/showroom/phantom.html">PHANTOM</a>
+                                        href="//www.rolls-roycemotorcars.com/en_GB/showroom/phantom.html">PHANTOM</a>
                                 </li>
                                 <li><a style="color:black" class="dropdown-item"
-                                        href="https://www.rolls-roycemotorcars.com/en_GB/showroom/wraith.html">WRAITH</a>
+                                        href="//www.rolls-roycemotorcars.com/en_GB/showroom/wraith.html">WRAITH</a>
                                 </li>
                                 <li><a style="color:black" class="dropdown-item"
-                                        href="https://www.rolls-roycemotorcars.com/en_GB/showroom/dawn.html">DAWN</a>
+                                        href="//www.rolls-roycemotorcars.com/en_GB/showroom/dawn.html">DAWN</a>
                                 </li>
                                 <li><a style="color:black" class="dropdown-item"
-                                        href="https://www.rolls-roycemotorcars.com/en_GB/showroom/black-badge.html">BLACK
+                                        href="//www.rolls-roycemotorcars.com/en_GB/showroom/black-badge.html">BLACK
                                         BLADE</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -66,7 +76,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
-                                href="https://www.rolls-roycemotorcars.com/en_GB/bespoke/discover.html">BESPOKE</a>
+                                href="//www.rolls-roycemotorcars.com/en_GB/bespoke/discover.html">BESPOKE</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -88,7 +98,7 @@
                                 <h3>BLACK <span><img src="./images/infinity.svg" alt="image"></span>BADGE</h3>
                                 <h1>GHOST</h1>
                             </div>
-                            <section class="hero-text">
+                            <section class="hero-text animate__animated animate__fadeIn">
                                 <h1>PURE POWER. PURE DARKNESS.</h1>
                                 <p>Black Badge Ghost lives after dark, igniting the rebel within. Powerful, agile, and
                                     fearless, it is the most
@@ -97,14 +107,15 @@
                                 </p>
                                 <div class="row">
                                     <div class="col">
-                                        <a href="#" class="btn btns">MAKE AN ENQUIRY</a>
+                                        <a href="#" class="btn btns ">MAKE AN ENQUIRY</a>
                                         <a href="#" class="btn btns">CONFIGURE YOURS</a>
                                     </div>
                                 </div>
                         </div>
         </section>
 
-        <section class="video">
+        <section data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom" class="video" >
             <video autoplay muted loop id="myVideo">
                 <source src="video/video1.mp4" type="video/mp4">
             </video>
@@ -214,7 +225,7 @@
 
         <div class="line"></div>
 
-        <section class="fea">
+        <section class="fea" data-aos="fade-in">
             <div class="fea-text">
                 <h1> VENTURE THROUGH THE SHADOWS</h1>
                 <br>
@@ -225,7 +236,7 @@
             </div>
             <img src="images/f5.webp" alt="">
         </section>
-        <section class="fea">
+        <section class="fea" data-aos="fade-in">
             <img src="images/f3.webp" alt="">
             <div class="fea-text">
                 <h1>FORCEFULLY FORMIDABLE</h1>
@@ -235,7 +246,7 @@
                     force unbound. </p>
             </div>
         </section>
-        <section class="fea">
+        <section class="fea" data-aos="fade-in">
             <div class="fea-text">
                 <h1>DESIGNED TO THRILL</h1>
                 <p>Striking callipers, available in four statement hues, are circled by never-before-seen Carbon Alloy
@@ -245,7 +256,7 @@
             <img src="images/f2.webp" alt="">
 
         </section>
-        <section class="fea">
+        <section class="fea" data-aos="fade-in">
             <img src="images/f4.webp" alt="">
             <div class="fea-text">
                 <h1>AN ENDLESS VISION</h1>
@@ -254,7 +265,7 @@
                     emerges from the fascia’s void with a mesmerising, starlit display.</p>
             </div>
         </section>
-        <section class="fea">
+        <section class="fea" data-aos="fade-in">
             <div class="fea-text">
                 <h1>STELLAR SKY ABOVE</h1>
                 <p>Enlivened by motion, the Shooting Star Headliner’s immersive glow transports you to a world of cosmic
@@ -263,7 +274,7 @@
             <img src="images/f0.webp" alt="">
 
         </section>
-        <section class="fea">
+        <section class="fea" data-aos="fade-in">
             <img src="images/f1.webp" alt="">
             <div class="fea-text">
                 <h1>INFINITE POWER</h1>
@@ -283,9 +294,9 @@
         <div class="line"></div>
 
 
-        <section class="carousel-text ">
+        <section class="carousel-text" data-aos="fade-up">
             <div class="">
-                <h1 style="padding-top: 1rem;">BOLDER IN COLOUR</h1>
+                <h1 style="padding-top: 0;">BOLDER IN COLOUR</h1>
                 <p>Venture beyond black with Bespoke. Embolden your Black Badge Ghost with vivacious colour, luxurious
                     hues,
                     or
@@ -301,7 +312,7 @@
         </div>
     </div>
 
-    <section class="foot-img">
+    <section class="foot-img" data-aos="fade-up">
         <div class="overlay">
             <h5>Black <span class="infinity"><img src="images/infinity.svg" alt="image"></span> Blade GHOST</h5>
             <h2>MEET THE FAMILY</h2>
@@ -310,7 +321,7 @@
     </section>
 
 
-    <section class="foot-text">
+    <section class="foot-text" data-aos="fade-up">
         <div class="container">
             <div class="text1">
                 <p>The values of fuel consumptions, CO2 emissions and energy consumptions shown are based on the new
@@ -331,7 +342,7 @@
                     part of
                     any
                     offer made, rather they are solely for the purpose of comparing different kinds of vehicle.</p>
-                <p style="padding-bottom: 2rem;margin-bottom: 0;">Further information about the official fuel
+                <p style="padding-bottom: 0;margin-bottom: 0;">Further information about the official fuel
                     consumption
                     and the specific CO2 emissions of new passenger cars
                     can be taken out of the "Guide to Fuel Consumption, CO2 Emissions and Electricity Consumption of New
@@ -384,7 +395,7 @@
             </div>
 
         </div>
-        <hr style="margin: 1rem;">
+        <hr style="margin-top: 0;margin-bottom: 2rem;">
 
         <div class="social">
             <div class="container">
@@ -397,8 +408,12 @@
             </div>
         </div>
     </footer>
-
-<script src="js/main.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    <script src="//unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
