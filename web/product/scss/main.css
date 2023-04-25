@@ -207,10 +207,14 @@ img {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
-.fea .fea-text {
+h2 {
+  color: white;
+}
+
+.fea article {
   padding-top: 1.5rem;
   text-align: left;
   display: flex;
@@ -222,7 +226,7 @@ h1 {
     display: flex;
     flex-direction: column;
   }
-  .fea .fea-text {
+  .fea article {
     order: 1;
   }
   .fea img {
@@ -231,7 +235,7 @@ h1 {
   }
 }
 
-.fea-last .fea-text {
+.fea-last article {
   text-align: left;
   padding: 0 1.5rem;
 }
@@ -325,14 +329,6 @@ h1 {
 }
 .foot-img img {
   width: 60px;
-}
-
-.fea-last {
-  text-align: center;
-  padding: 1rem 1.5rem;
-}
-.fea-last .fea-text {
-  padding: 0 0;
 }
 
 .foot-text {
@@ -457,7 +453,7 @@ footer ul a {
 }
 .social .container {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .social .container a {
   margin-top: 1rem;
