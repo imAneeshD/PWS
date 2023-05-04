@@ -39,21 +39,28 @@ let objStr = localStorage.getItem('Items');
 if (objStr != null) {
     items = JSON.parse(objStr);
 }
+
+let objStr3 = localStorage.getItem('CompItems');
+if (objStr3 != null) {
+    compItems = JSON.parse(objStr3);
+}
+
 let objStr2 = localStorage.getItem('ActItems');
 if (objStr2 != null) {
     LocalActItems = JSON.parse(objStr2);
+    filteredArray = items.filter(item => !compItems.includes(item));
+    actItems=filteredArray;
 }
-let objStr3 = localStorage.getItem('CompItems');
-if (objStr3 != null) {
-    LocalCompItems = JSON.parse(objStr3);
+if(objStr2==null){
+    actItems=items.slice();
+    console.log(actItems);
 }
 
-compItems = LocalCompItems;
+console.log(actItems);
+console.log(compItems);
 
 displayItem();
-actItems = items.filter(item => !compItems.includes(item));
 
-console.log(actItems)
 
 newValue.addEventListener('keypress', function (e) {
     if (e.key === "Enter") {
@@ -65,7 +72,7 @@ newValue.addEventListener('keypress', function (e) {
 
 enterBtn.onclick = () => {
     const newItem = newValue.value;
-
+    
     if (newItem == "") {
         alert("Write something (new)")
         return 0;
@@ -76,6 +83,7 @@ enterBtn.onclick = () => {
         saveItem(items);
         newValue.value = "";
         displayItem();
+        location.reload();
     }
 }
 
@@ -106,7 +114,6 @@ function displayItem() {
     ActCount.innerHTML = actItems.length + "/" + items.length;
     CompCount.innerHTML = compItems.length + "/" + items.length;
 
-
     let list = '';
     actItems.forEach((item, i) => {
         list += `
@@ -121,21 +128,19 @@ function displayItem() {
     });
     actUl.innerHTML = list;
 
-    items.forEach((item, i) => {
-        list += `
+    let list2="";
+    compItems.forEach((item, i) => {
+        list2 += `
     <tbody>
     <tr>
-      <td class="table-data"><input id="checkbox" onclick="check(${i})" type="checkbox" class="checkbox"><label for="checkbox">${item}</label></td>
+      <td class="table-data"><input id="checkbox" onclick="check(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
       <td><span><i  class="fa fa-duotone fa-file-pen" onclick="openEditPopup(${i})"></i></span></td>
       <td><span><i class="fa fa-light fa-trash" onclick="openDelPopup(${i})"></i></span></td>
     </tr>
   </tbody>
 `;
     });
-    allUl.innerHTML = list;
-
-
-
+    compUl.innerHTML = list2;
 }
 
 // Display for Active items
@@ -246,7 +251,8 @@ clear.onclick = () => {
 
 // Tabs click
 
-actUl.classList.add("d-none");
+actUl.classList.remove("d-none");
+compUl.classList.remove("d-none");
 
 allTab.onclick = () => {
     AllCount.innerHTML = items.length;
@@ -254,9 +260,9 @@ allTab.onclick = () => {
     actTab.classList.remove("active")
     compTab.classList.remove("active")
 
-    allUl.classList.remove("d-none");
-    actUl.classList.add("d-none");
-    compUl.classList.add("d-none");
+    allUl.classList.add("d-none");
+    actUl.classList.remove("d-none");
+    compUl.classList.remove("d-none");
 }
 
 actTab.onclick = () => {
