@@ -262,6 +262,7 @@ allTab.onclick = () => {
     allUl.classList.add("d-none");
     actUl.classList.remove("d-none");
     compUl.classList.remove("d-none");
+    displayItem();
 }
 
 actTab.onclick = () => {
@@ -298,7 +299,8 @@ function Compcheck(id){
     compItems.splice(id,1);
     console.log(compItems);
     actItems.push(value);
-
+    ActCount.innerHTML = actItems.length + "/" + items.length;
+    CompCount.innerHTML = compItems.length + "/" + items.length;
     saveCompItem(compItems);
     displayCompItem();
 }
