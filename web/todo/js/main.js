@@ -49,18 +49,14 @@ let objStr2 = localStorage.getItem('ActItems');
 if (objStr2 != null) {
     LocalActItems = JSON.parse(objStr2);
     filteredArray = items.filter(item => !compItems.includes(item));
-    actItems=filteredArray;
+    actItems = filteredArray;
 }
-if(objStr2==null){
-    actItems=items.slice();
-    console.log(actItems);
+if (objStr2 == null) {
+    actItems = items.slice();
 }
-
-console.log(actItems);
-console.log(compItems);
 
 displayItem();
-
+newValue.focus();
 
 newValue.addEventListener('keypress', function (e) {
     if (e.key === "Enter") {
@@ -72,7 +68,7 @@ newValue.addEventListener('keypress', function (e) {
 
 enterBtn.onclick = () => {
     const newItem = newValue.value;
-    
+
     if (newItem == "") {
         alert("Write something (new)")
         return 0;
@@ -84,6 +80,7 @@ enterBtn.onclick = () => {
         newValue.value = "";
         displayItem();
         location.reload();
+        
     }
 }
 
@@ -128,7 +125,7 @@ function displayItem() {
     });
     actUl.innerHTML = list;
 
-    let list2="";
+    let list2 = "";
     compItems.forEach((item, i) => {
         list2 += `
     <tbody>
@@ -169,7 +166,7 @@ function displayCompItem() {
         list += `
     <tbody>
     <tr>
-      <td class="table-data"><input  id="checkbox" onclick="check(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
+      <td class="table-data"><input  id="checkbox" onclick="Compcheck(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
       <td><span><i  class="fa fa-duotone fa-file-pen" onclick="openEditPopup(${i})"></i></span></td>
       <td><span><i class="fa fa-light fa-trash" onclick="openDelPopup(${i})"></i></span></td>
     </tr>
@@ -218,6 +215,7 @@ function openEditPopup(id) {
             displayItem();
         }
         editValue.value = "";
+        location.reload();
 
     }
 }
@@ -233,6 +231,7 @@ function openDelPopup(id) {
 
     delBtn.onclick = () => {
         deleteItem(id);
+        location.reload();
     }
 }
 function closeDelPopup() {
@@ -291,28 +290,46 @@ compTab.onclick = () => {
 }
 
 
-// Checkbox active
+// Checkbox on click
+
+function Compcheck(id){
+    const value=compItems[id];
+    // console.log(value);
+    compItems.splice(id,1);
+    console.log(compItems);
+    actItems.push(value);
+
+    saveCompItem(compItems);
+    displayCompItem();
+}
 
 function check(id) {
 
-    // completed
-    const value = items[id];
+    const value = actItems[id];
     console.log(value)
     const index = compItems.indexOf(value);
     const index2 = actItems.indexOf(value);
+    console.log(index)
+    console.log(index2)
 
-    if (compItems.includes(items[id])) {
+    console.log("Active Before: " + actItems)
+    console.log("Comp Before: " + compItems)
+
+
+    if (compItems.includes(value)) {
         actItems.push(value);
         compItems.splice(index, 1);
     } else {
-        compItems.push(items[id]);
+        compItems.push(value);
         actItems.splice(index2, 1);
     }
 
-
+    console.log("Active After: " + actItems)
+    console.log("Comp After: " + compItems)
 
     saveActItem(actItems);
     saveCompItem(compItems);
+    location.reload();
     AllCount.innerHTML = items.length;
     ActCount.innerHTML = actItems.length + "/" + items.length;
     CompCount.innerHTML = compItems.length + "/" + items.length;

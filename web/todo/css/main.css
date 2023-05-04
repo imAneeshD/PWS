@@ -76,6 +76,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.hero .section-secondary .table {
+  margin: 0;
+}
 .hero .section-secondary .table .checkbox:checked + label {
   text-decoration: line-through;
   color: grey;
