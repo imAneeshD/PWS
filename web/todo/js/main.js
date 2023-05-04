@@ -6,19 +6,19 @@ const editValue = document.getElementById("editInput");
 
 let checkbox = document.getElementById("checkbox");
 
-const count=document.getElementById("count");
+let AllCount = document.getElementById("AllCount");
+let ActCount = document.getElementById("ActCount");
+let CompCount = document.getElementById("CompCount");
 
 // ul's
 const allUl = document.getElementById("allUl");
 const actUl = document.getElementById("actUl");
 const compUl = document.getElementById("compUl");
 
-
 // tabs
 const allTab = document.getElementById("all-tab");
 const actTab = document.getElementById("active-tab");
 const compTab = document.getElementById("completed-tab");
-
 
 const main = document.getElementById("main");
 
@@ -28,21 +28,32 @@ let compItems = [];
 
 let edit_id = null;
 
-
 const delBtn = document.getElementById("delBtn");
-
 
 let delPopup = document.getElementById("del-popup");
 let editPopup = document.getElementById("edit-popup");
+
+//-------------------------------------------//
 
 let objStr = localStorage.getItem('Items');
 if (objStr != null) {
     items = JSON.parse(objStr);
 }
-
+let objStr2 = localStorage.getItem('ActItems');
+if (objStr2 != null) {
+    LocalActItems = JSON.parse(objStr2);
+}
+let objStr3 = localStorage.getItem('CompItems');
+if (objStr3 != null) {
+    LocalCompItems = JSON.parse(objStr3);
+}
 
 displayItem();
-actItems = items.slice();
+//actItems = items.slice();
+
+
+
+
 
 newValue.addEventListener('keypress', function (e) {
     if (e.key === "Enter") {
@@ -67,15 +78,38 @@ enterBtn.onclick = () => {
         displayItem();
     }
 
+
 }
+
+
+
+// Saving to local storate
 
 function saveItem(items) {
     let name = JSON.stringify(items)
     localStorage.setItem('Items', name);
 }
+function saveActItem(items) {
+    let name = JSON.stringify(items)
+    localStorage.setItem('ActItems', name);
+}
+
+function saveCompItem(items) {
+    let name = JSON.stringify(items)
+    localStorage.setItem('CompItems', name);
+}
+
+
+
+// Display for all items
 
 function displayItem() {
-    count.innerHTML=compItems.length+"/"+items.length;
+    actItems = items.slice();
+
+    AllCount.innerHTML = items.length;
+    ActCount.innerHTML = actItems.length + "/" + items.length;
+    CompCount.innerHTML = compItems.length + "/" + items.length;
+
 
     let list = '';
     items.forEach((item, i) => {
@@ -91,6 +125,9 @@ function displayItem() {
     });
     allUl.innerHTML = list;
 }
+
+// Display for Active items
+
 function displayActItem() {
     let list = '';
     actItems.forEach((item, i) => {
@@ -106,6 +143,9 @@ function displayActItem() {
     });
     actUl.innerHTML = list;
 }
+
+// Display for Completed items
+
 function displayCompItem() {
     let list = '';
     compItems.forEach((item, i) => {
@@ -122,7 +162,7 @@ function displayCompItem() {
     compUl.innerHTML = list;
 }
 
-
+// Deleteing item
 
 function deleteItem(id) {
     items.splice(id, 1);
@@ -191,10 +231,13 @@ clear.onclick = () => {
 
 }
 
+
+// Tabs click
+
 actUl.classList.add("d-none");
 
 allTab.onclick = () => {
-    count.innerHTML=items.length+"/"+items.length;
+    AllCount.innerHTML = items.length;
     allTab.classList.add("active")
     actTab.classList.remove("active")
     compTab.classList.remove("active")
@@ -205,7 +248,7 @@ allTab.onclick = () => {
 }
 
 actTab.onclick = () => {
-    count.innerHTML=actItems.length+"/"+items.length;
+    ActCount.innerHTML = actItems.length + "/" + items.length;
     actTab.classList.add("active")
     allTab.classList.remove("active")
     compTab.classList.remove("active")
@@ -214,11 +257,11 @@ actTab.onclick = () => {
     allUl.classList.add("d-none");
     compUl.classList.add("d-none");
     displayActItem()
-    
+
 }
 
 compTab.onclick = () => {
-    count.innerHTML=compItems.length+"/"+items.length;
+    CompCount.innerHTML = compItems.length + "/" + items.length;
     allTab.classList.remove("active")
     actTab.classList.remove("active")
     compTab.classList.add("active")
@@ -230,7 +273,10 @@ compTab.onclick = () => {
 }
 
 
+// Checkbox active
+
 function check(id) {
+
     // completed
     const value = items[id];
     console.log(value)
@@ -238,13 +284,17 @@ function check(id) {
     const index2 = actItems.indexOf(value);
 
     if (compItems.includes(items[id])) {
-        compItems.splice(index, 1);
         actItems.push(value);
+        compItems.splice(index, 1);
     } else {
         compItems.push(items[id]);
-        actItems.splice(index2,1);
+        actItems.splice(index2, 1);
     }
 
-    console.log(compItems)
-    console.log(actItems)
+    saveActItem(actItems);
+    saveCompItem(compItems);
+    AllCount.innerHTML = items.length;
+    ActCount.innerHTML = actItems.length + "/" + items.length;
+    CompCount.innerHTML = compItems.length + "/" + items.length;
+
 }
