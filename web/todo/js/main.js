@@ -48,10 +48,11 @@ if (objStr3 != null) {
     LocalCompItems = JSON.parse(objStr3);
 }
 
+compItems = items.filter(item => !LocalActItems.includes(item));
+
+
 displayItem();
-//actItems = items.slice();
-
-
+actItems = items.filter(item => !compItems.includes(item));
 
 
 
@@ -77,8 +78,6 @@ enterBtn.onclick = () => {
         newValue.value = "";
         displayItem();
     }
-
-
 }
 
 
@@ -104,15 +103,21 @@ function saveCompItem(items) {
 // Display for all items
 
 function displayItem() {
-    actItems = items.slice();
+
+
+    compItems = items.filter(item => !LocalActItems.includes(item));
+    actItems = items.filter(item => !compItems.includes(item));
+
 
     AllCount.innerHTML = items.length;
     ActCount.innerHTML = actItems.length + "/" + items.length;
     CompCount.innerHTML = compItems.length + "/" + items.length;
 
+    actUl.classList.remove("d-none")
+    console.log(actItems);
 
-    let list = '';
-    items.forEach((item, i) => {
+    let list="";
+    actItems.forEach((item, i) => {
         list += `
     <tbody>
     <tr>
@@ -123,7 +128,24 @@ function displayItem() {
   </tbody>
 `;
     });
-    allUl.innerHTML = list;
+    actUl.innerHTML = list;
+
+    console.log(compItems);
+
+    let list2="";
+    compItems.forEach((item, i) => {
+        list2 += `
+    <tbody>
+    <tr>
+      <td class="table-data"><input id="checkbox" onclick="check(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
+      <td><span><i  class="fa fa-duotone fa-file-pen" onclick="openEditPopup(${i})"></i></span></td>
+      <td><span><i class="fa fa-light fa-trash" onclick="openDelPopup(${i})"></i></span></td>
+    </tr>
+  </tbody>
+`;
+    });
+    compUl.innerHTML = list2;
+
 }
 
 // Display for Active items
@@ -234,7 +256,7 @@ clear.onclick = () => {
 
 // Tabs click
 
-actUl.classList.add("d-none");
+
 
 allTab.onclick = () => {
     AllCount.innerHTML = items.length;
@@ -242,9 +264,9 @@ allTab.onclick = () => {
     actTab.classList.remove("active")
     compTab.classList.remove("active")
 
-    allUl.classList.remove("d-none");
-    actUl.classList.add("d-none");
-    compUl.classList.add("d-none");
+    allUl.classList.add("d-none");
+    actUl.classList.remove("d-none");
+    compUl.classList.remove("d-none");
 }
 
 actTab.onclick = () => {
@@ -290,6 +312,8 @@ function check(id) {
         compItems.push(items[id]);
         actItems.splice(index2, 1);
     }
+
+
 
     saveActItem(actItems);
     saveCompItem(compItems);
