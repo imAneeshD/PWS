@@ -48,13 +48,12 @@ if (objStr3 != null) {
     LocalCompItems = JSON.parse(objStr3);
 }
 
-compItems = items.filter(item => !LocalActItems.includes(item));
-
+compItems = LocalCompItems;
 
 displayItem();
 actItems = items.filter(item => !compItems.includes(item));
 
-
+console.log(actItems)
 
 newValue.addEventListener('keypress', function (e) {
     if (e.key === "Enter") {
@@ -103,20 +102,12 @@ function saveCompItem(items) {
 // Display for all items
 
 function displayItem() {
-
-
-    compItems = items.filter(item => !LocalActItems.includes(item));
-    actItems = items.filter(item => !compItems.includes(item));
-
-
     AllCount.innerHTML = items.length;
     ActCount.innerHTML = actItems.length + "/" + items.length;
     CompCount.innerHTML = compItems.length + "/" + items.length;
 
-    actUl.classList.remove("d-none")
-    console.log(actItems);
 
-    let list="";
+    let list = '';
     actItems.forEach((item, i) => {
         list += `
     <tbody>
@@ -130,21 +121,20 @@ function displayItem() {
     });
     actUl.innerHTML = list;
 
-    console.log(compItems);
-
-    let list2="";
-    compItems.forEach((item, i) => {
-        list2 += `
+    items.forEach((item, i) => {
+        list += `
     <tbody>
     <tr>
-      <td class="table-data"><input id="checkbox" onclick="check(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
+      <td class="table-data"><input id="checkbox" onclick="check(${i})" type="checkbox" class="checkbox"><label for="checkbox">${item}</label></td>
       <td><span><i  class="fa fa-duotone fa-file-pen" onclick="openEditPopup(${i})"></i></span></td>
       <td><span><i class="fa fa-light fa-trash" onclick="openDelPopup(${i})"></i></span></td>
     </tr>
   </tbody>
 `;
     });
-    compUl.innerHTML = list2;
+    allUl.innerHTML = list;
+
+
 
 }
 
@@ -256,7 +246,7 @@ clear.onclick = () => {
 
 // Tabs click
 
-
+actUl.classList.add("d-none");
 
 allTab.onclick = () => {
     AllCount.innerHTML = items.length;
@@ -264,9 +254,9 @@ allTab.onclick = () => {
     actTab.classList.remove("active")
     compTab.classList.remove("active")
 
-    allUl.classList.add("d-none");
-    actUl.classList.remove("d-none");
-    compUl.classList.remove("d-none");
+    allUl.classList.remove("d-none");
+    actUl.classList.add("d-none");
+    compUl.classList.add("d-none");
 }
 
 actTab.onclick = () => {
