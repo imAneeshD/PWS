@@ -56,9 +56,12 @@ body {
   background: whitesmoke;
 }
 .hero .section-primary button {
-  width: 30%;
+  width: 100px;
   border: 1px solid rgb(111, 173, 255);
   border-radius: 5px;
+}
+.hero .section-primary .btns {
+  width: 150px;
 }
 .hero .section-secondary {
   width: 100%;

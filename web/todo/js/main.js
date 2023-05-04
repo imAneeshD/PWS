@@ -1,6 +1,8 @@
 // input and butns
 const enterBtn = document.getElementById("enter");
 const clear = document.getElementById("clear");
+const clearComp = document.getElementById("clearComp");
+
 const newValue = document.getElementById("input");
 const editValue = document.getElementById("editInput");
 
@@ -130,8 +132,8 @@ function displayItem() {
         list2 += `
     <tbody>
     <tr>
-      <td class="table-data"><input id="checkbox" onclick="check(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
-      <td><span><i  class="fa fa-duotone fa-file-pen" onclick="openEditPopup(${i})"></i></span></td>
+      <td class="table-data"><input id="checkbox" onclick="Compcheck(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
       <td><span><i class="fa fa-light fa-trash" onclick="openDelPopup(${i})"></i></span></td>
     </tr>
   </tbody>
@@ -167,7 +169,7 @@ function displayCompItem() {
     <tbody>
     <tr>
       <td class="table-data"><input  id="checkbox" onclick="Compcheck(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
-      <td><span><i  class="fa fa-duotone fa-file-pen" onclick="openEditPopup(${i})"></i></span></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
       <td><span><i class="fa fa-light fa-trash" onclick="openDelPopup(${i})"></i></span></td>
     </tr>
   </tbody>
@@ -303,6 +305,7 @@ function Compcheck(id){
     CompCount.innerHTML = compItems.length + "/" + items.length;
     saveCompItem(compItems);
     displayCompItem();
+    location.reload();
 }
 
 function check(id) {
@@ -336,4 +339,14 @@ function check(id) {
     ActCount.innerHTML = actItems.length + "/" + items.length;
     CompCount.innerHTML = compItems.length + "/" + items.length;
 
+}
+
+clearComp.onclick=()=>{
+    console.log(compItems);
+    items=items.filter(item=>!compItems.includes(item));
+    console.log(items)
+    localStorage.removeItem("CompItems");
+    console.log(compItems);
+    saveItem(items);
+   location.reload();
 }
