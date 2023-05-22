@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$primary: #AD9FE9;
+$tableRow: #394867;
+$background: #F1F6F9;
+$popup: #AD9FE9;
+
+body {
+    background: $background !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.container {
+    height: 100vh;
+}
+
+.hero-text {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 5vw;
+        font-weight: bold;
+        padding: 1rem 0;
+    }
+}
+
+.hero-img {
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+.input-holder {
+    margin: 5% 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        background: $background;
+        width: 80%;
+        border: none;
+        border-bottom: 1px solid $primary;
+        outline: none;
+    }
+
+    .btn {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+    }
+
+    .enter-btn {
+        filter: drop-shadow(2px 2px 3px black);
+        margin-left: .5rem;
+        margin-right: 0;
+        width: 20%;
+        border: 1px solid none;
+        background: #9588CE;
+        border-radius: 25px;
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+.table {
+    background: #eeeaff;
+
+    .checkbox:checked {
+        accent-color: #01ffcc;
+
+    }
+
+    .checkbox:checked+label {
+        text-decoration: line-through;
+        color: grey;
+
+    }
+
+    label {
+        margin-left: 2rem;
+    }
+}
+
+.popup {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    right: 50%;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    background: $popup;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 300px;
+    padding: 1rem;
+
+    input {
+        margin: 1rem;
+        background: $popup;
+        border: none;
+        border-bottom: 2px solid;
+        outline: none;
+        height: 30px;
+    }
+
+    .btns {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .btn {
+            margin: .5rem;
+            background: $tableRow;
+            color: white;
+            width: 70px;
+        }
+    }
+}
+
+.menu-item {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    .btn {
+        filter: drop-shadow(2px 2px 3px black);
+        margin-left: .5rem;
+        margin-right: 0;
+        width: auto;
+        border: 1px solid none;
+        background: #9588CE;
+        border-radius: 25px;
+        color: rgb(255, 255, 255);
+
+    }
+
+}
+
+
+.tabs {
+    padding: .5rem .5rem;
+    background: $background;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+
+    .count {
+        margin-left: 1rem;
+        font-size: 14px;
+    }
+
+    .tab-holder {
+        margin: .5rem;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        display: flex;
+        width: 25%;
+        height: 40px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+
+        &:hover {
+            color: rgb(255, 255, 255);
+            background-color: $primary;
+        }
+    }
+
+    .menu-holder {
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .hero-text {
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+    }
+
+    .hero-img {
+        img {
+            width: 100%;
+            height: 200px;
+        }
+    }
+    .input-holder{
+        margin: 1rem 0;
+        input{
+            width: 30%;
+        }
+        .enter-btn {
+        width: 110px;
+        }
+    }
+
+    .tabs{
+        .tab-holder{
+            width: 15%;
+        }
+    }
+    .display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+}

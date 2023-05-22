@@ -311,14 +311,9 @@ function Compcheck(id){
 function check(id) {
 
     const value = actItems[id];
-    console.log(value)
+
     const index = compItems.indexOf(value);
     const index2 = actItems.indexOf(value);
-    console.log(index)
-    console.log(index2)
-
-    console.log("Active Before: " + actItems)
-    console.log("Comp Before: " + compItems)
 
 
     if (compItems.includes(value)) {
@@ -328,9 +323,6 @@ function check(id) {
         compItems.push(value);
         actItems.splice(index2, 1);
     }
-
-    console.log("Active After: " + actItems)
-    console.log("Comp After: " + compItems)
 
     saveActItem(actItems);
     saveCompItem(compItems);

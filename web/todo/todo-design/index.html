@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster</title>
+</head>
+
+<body >
+
+    <div id="main" class="main">
+        <div class="container">
+            <section class="hero-text">
+                <h1>TaskMaster</h1>
+            </section>
+            <section class="hero-img">
+                <img src="images/hero.svg" alt="">
+            </section>
+    
+            <section class="input-holder">
+                <input type="text" placeholder="Add a task to your list." name="input" id="input">
+                <button class="btn enter-btn" id="add">Add</button>
+            </section>
+            <section id="menu" class="menu-item">
+                <ul>
+                    <li id="del-all" class="btn">Clear All</li>
+                    <li id="del-done" class="btn">Clear Done</li>
+                </ul>
+            </section>
+            <section class="tabs">
+                <div class="tab-holder btn" id="all">All <span class="count" id="allcount">0</span></div>
+                <div class="tab-holder btn" id="active">Active <span class="count" id="activecount">0</span></div>
+                <div class="tab-holder btn" id="done">Done <span class="count" id="donecount">0</span></div>
+            </section>
+            <section class="display">
+                <table id="t-all" class="table  t-all"></table>
+                <table id="t-active" class="table table-striped t-active"></table>
+                <table id="t-done" class="table table-striped t-done"></table>
+            </section>
+    
+
+        </div>
+    </div>
+    
+    <div id="popup" class="popup d-none">
+        <h3 id="title">Make Changes</h3>
+        <input class="input" type="text" name="input" id="editInput">
+        <div class="btns">
+            <button class="btn enter-btn" id="edit">Modify</button>
+            <button class="btn enter-btn" id="deleteBtn">Yes</button>
+            <button class="btn enter-btn" id="cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+
+</html>
