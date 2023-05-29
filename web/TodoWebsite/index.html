@@ -22,7 +22,7 @@
                 <h1>TaskMaster</h1>
             </section>
             <section class="hero-img">
-                <img src="images/hero.svg" alt="">
+                <img src="images/hero.svg" alt="image">
             </section>
     
             <section class="input-holder">
@@ -35,16 +35,18 @@
                     <li id="del-done" class="btn">Clear Done</li>
                 </ul>
             </section>
-            <section class="tabs">
-                <div class="tab-holder btn" id="all">All <span class="count" id="allcount">0</span></div>
-                <div class="tab-holder btn" id="active">Active <span class="count" id="activecount">0</span></div>
-                <div class="tab-holder btn" id="done">Done <span class="count" id="donecount">0</span></div>
-            </section>
-            <section class="display">
-                <table id="t-all" class="table  t-all"></table>
-                <table id="t-active" class="table table-striped t-active"></table>
-                <table id="t-done" class="table table-striped t-done"></table>
-            </section>
+            <div class="tbl-container">
+                <section class="tabs">
+                    <div class="tab-holder btn" id="all">All <span class="count" id="allcount">0</span></div>
+                    <div class="tab-holder btn" id="active">Active <span class="count" id="activecount">0</span></div>
+                    <div class="tab-holder btn" id="done">Done <span class="count" id="donecount">0</span></div>
+                </section>
+                <section class="display">
+                    <table id="t-all" class="table  t-all"></table>
+                    <table id="t-active" class="table table-striped t-active"></table>
+                    <table id="t-done" class="table table-striped t-done"></table>
+                </section>
+            </div>
     
 
         </div>

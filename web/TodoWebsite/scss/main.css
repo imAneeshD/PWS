@@ -58,7 +58,7 @@ body {
 }
 
 .table {
-  background: #eeeaff;
+  background: #cbc0fc;
 }
 .table .checkbox:checked {
   accent-color: #01ffcc;

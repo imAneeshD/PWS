@@ -70,9 +70,15 @@ body {
     }
 }
 
+// .tbl-container{
+//     margin: 1rem 0;
+//     padding: 1rem;
+//     background: #eeeaff;
+//     border-radius: 10px;
+// }
 
 .table {
-    background: #eeeaff;
+    background: #cbc0fc;
 
     .checkbox:checked {
         accent-color: #01ffcc;
@@ -232,6 +238,7 @@ body {
             width: 15%;
         }
     }
+
     .display{
         display: flex;
         flex-direction: column;
