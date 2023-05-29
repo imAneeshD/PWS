@@ -7,4 +7,4 @@ web
 4. https://imaneeesh.github.io/PWS/web/sass-website
 5. https://imaneeesh.github.io/PWS/web/portfolio
 6. https://imaneeesh.github.io/PWS/web/product
-7. https://imaneeesh.github.io/PWS/web/todo/todo-design
+7. https://imaneeesh.github.io/PWS/web/TodoWebsite
