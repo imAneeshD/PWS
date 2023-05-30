@@ -175,7 +175,7 @@ function displayItem() {
         <tbody>
         <tr>
           <td class="table-data"><input id="checkbox" onclick="Compcheck(${i})" type="checkbox" class="checkbox" checked><label for="checkbox">${item}</label></td>
-          <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
           <td><span><i class="fa fa-light fa-trash" onclick="openCompPopup(${i})"></i></span></td>
         </tr>
       </tbody>
@@ -274,6 +274,7 @@ function openDelPopup(id) {
 
 function openCompPopup(id){
     main.style.opacity = "10%";
+
     popup.classList.remove("d-none")
     editInput.classList.add("d-none");
     deleteBtn.classList.remove("d-none");
