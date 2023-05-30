@@ -211,7 +211,7 @@ body {
             ;
             height: 7px;
             width: 7px;
-            background-color: #E3D2BF;
+            background-color: $secondaryColor;
             border-radius: 50%;
             display: inline-block;
         }
@@ -270,7 +270,6 @@ body {
         }
     }
 }
-
 
 
 // About Page
