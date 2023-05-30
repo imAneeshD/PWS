@@ -96,6 +96,7 @@ body {
     }
 }
 
+
 .popup {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -124,14 +125,15 @@ body {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
 
         .btn {
             margin: .5rem;
             background: $tableRow;
             color: white;
-            width: 70px;
+            width: 90px;
         }
+        
     }
 }
 
@@ -157,10 +159,15 @@ body {
         background: #9588CE;
         border-radius: 25px;
         color: rgb(255, 255, 255);
+        &:hover{
+            color: white;
+        }
 
     }
 
 }
+
+
 
 
 .tabs {

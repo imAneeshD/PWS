@@ -98,13 +98,13 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .popup .btns .btn {
   margin: 0.5rem;
   background: #394867;
   color: white;
-  width: 70px;
+  width: 90px;
 }
 
 .menu-item {
@@ -127,6 +127,9 @@ body {
   background: #9588CE;
   border-radius: 25px;
   color: rgb(255, 255, 255);
+}
+.menu-item .btn:hover {
+  color: white;
 }
 
 .tabs {
