@@ -2,36 +2,47 @@
 
 html {
     scroll-behavior: smooth;
-  }
-
-body {
-
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('/PWS/web/sass-website/images/AndroidSmall.svg') center/cover no-repeat;
-
 }
 
-.favicon{
+body {
+    color: $primaryColor;
+    background: $accentColor2 !important;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.favicon {
     height: 20px;
     width: 20px;
 }
 
 .navbar {
+    padding: .5rem 1rem;
+    margin: 0;
     filter: drop-shadow(1px 1px 3px rgb(180, 180, 180));
     position: fixed;
     z-index: 999;
     width: 100%;
-    height: 7vh;
-    margin-left: 0;
-    background: $primaryColor;
+    height: 40px;
+    background: $secondaryColor;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .nav-logo-img {
-        height: 40px;
-        padding-left: 1rem;
+    .nav-logo {
+        filter: drop-shadow(3px 3px 2px );
+        padding: 0 1rem;
+        font-size: 24px;
+        font-weight: bold;
+        .the {
+            color: black;
+        }
+        .royal {
+            color: $accentColor1;
+        }
+        .route {
+            color: $accentColor2;
+        }
     }
 
     .nav {
@@ -39,12 +50,10 @@ body {
     }
 
     .open2 {
-        
-        .menu-exit-btn-img{
+        .menu-exit-btn-img {
             height: 30px;
             width: 20px;
         }
-        transition: .4s ;
         display: block;
         background: rgb(210, 239, 248);
         position: fixed;
@@ -54,10 +63,13 @@ body {
         right: 0;
         top: 0;
         padding: 1rem;
+        filter: drop-shadow(-200px -0px 200px black);
+
+
         .nav-links {
 
             display: block;
-           
+
             list-style: none;
 
             a {
@@ -66,7 +78,8 @@ body {
                 font-size: large;
                 font-weight: bold;
             }
-            .nav-item{
+
+            .nav-item {
                 padding-top: 1rem;
             }
         }
@@ -77,6 +90,7 @@ body {
 
         .menu-btn-img {
             cursor: pointer;
+            margin-right: .5rem;
             height: 35px;
         }
     }
@@ -88,28 +102,21 @@ body {
 
 .main {
     .container {
-
         padding-top: 5rem;
     }
 }
 
-
 @media screen and (min-width: 950px) {
-    body {
-
-        background: url('/PWS/web/sass-website/images/iPad.svg') center/cover no-repeat;
-
-    }
 
 
     .navbar {
-        padding-bottom: .5rem;
-        padding-top: .5rem;
+        padding: .5rem 0;
 
         .nav {
-            .menu-exit-btn-img{
+            .menu-exit-btn-img {
                 display: none;
             }
+            margin-right: 1rem;
             display: flex;
             justify-content: space-between;
             width: 70vw;
@@ -126,16 +133,12 @@ body {
 
             .nav-links {
                 .nav-item {
+                    filter: drop-shadow(3px 3px 4px $accentColor1);
                     padding: .5rem;
                     font-weight: bold;
                     font-size: 18px;
                     display: inline-block;
 
-                    &:hover {
-                        background: $secondaryColor;
-                        border-radius: 5%;
-                        filter: drop-shadow(2px 2px 3px $secondaryColor)
-                    }
                 }
             }
         }
@@ -146,9 +149,8 @@ body {
 
         .nav-contact-btn {
             .contact-btn {
-                background: $secondaryColor;
                 border-radius: 5px;
-                filter: drop-shadow(3px 3px 4px $secondaryColor);
+                filter: drop-shadow(3px 3px 4px $accentColor1);
             }
         }
 
@@ -188,8 +190,7 @@ body {
 
 
             .title {
-
-                color: $secondaryColor;
+                color: $primaryColor;
                 margin: 0;
                 font-size: 30px;
                 text-transform: uppercase;
@@ -223,7 +224,7 @@ body {
     margin: 0;
 
     h2 {
-        color: $secondaryColor;
+        color: $primaryColor;
         font-size: 30px;
     }
 }
@@ -239,7 +240,7 @@ body {
         .card {
             width: 40vw;
             margin: 1rem 1rem;
-            background-color: #e7e7e7;
+            background-color: whitesmoke;
             border-radius: 2%;
             filter: drop-shadow(3px 5px 3px rgb(180, 180, 180));
 
@@ -255,8 +256,13 @@ body {
 
             }
 
+            .pakage{
+                font-weight: 400;
+                color: rgb(128, 128, 128);
+            }
+            
             p {
-                color: black;
+                color: $primaryColor;
                 font-weight: bold;
                 margin: .8rem;
                 line-height: .5rem;
@@ -269,17 +275,19 @@ body {
 
 // About Page
 
-
 footer {
-     bottom: 0;
-     width: 100%;
-     height: 5rem;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+
     .container {
+        display: flex;
+        justify-content: center;
         align-items: center;
         text-align: center;
-        background: black;
+        background: rgb(31, 28, 28);
         color: white;
-        height: 10vh;
+        height: 100%;
     }
 }
 
@@ -314,7 +322,6 @@ footer {
 
 
                 .title {
-
                     margin: 0;
                     font-size: 40px;
                     text-transform: uppercase;

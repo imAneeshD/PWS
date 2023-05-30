@@ -3,9 +3,10 @@ html {
 }
 
 body {
+  color: #2e424d;
+  background: #eaebed !important;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: url("/PWS/web/sass-website/images/AndroidSmall.svg") center/cover no-repeat;
 }
 
 .favicon {
@@ -14,26 +15,37 @@ body {
 }
 
 .navbar {
+  padding: 0.5rem 1rem;
+  margin: 0;
   filter: drop-shadow(1px 1px 3px rgb(180, 180, 180));
   position: fixed;
   z-index: 999;
   width: 100%;
-  height: 7vh;
-  margin-left: 0;
-  background: #FFFBEE;
+  height: 40px;
+  background: #5b8291;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navbar .nav-logo-img {
-  height: 40px;
-  padding-left: 1rem;
+.navbar .nav-logo {
+  filter: drop-shadow(3px 3px 2px);
+  padding: 0 1rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar .nav-logo .the {
+  color: black;
+}
+.navbar .nav-logo .royal {
+  color: #98dad9;
+}
+.navbar .nav-logo .route {
+  color: #eaebed;
 }
 .navbar .nav {
   display: none;
 }
 .navbar .open2 {
-  transition: 0.4s;
   display: block;
   background: rgb(210, 239, 248);
   position: fixed;
@@ -43,6 +55,7 @@ body {
   right: 0;
   top: 0;
   padding: 1rem;
+  filter: drop-shadow(-200px 0px 200px black);
 }
 .navbar .open2 .menu-exit-btn-img {
   height: 30px;
@@ -66,6 +79,7 @@ body {
 }
 .navbar .menu-btn .menu-btn-img {
   cursor: pointer;
+  margin-right: 0.5rem;
   height: 35px;
 }
 
@@ -74,14 +88,11 @@ body {
 }
 
 @media screen and (min-width: 950px) {
-  body {
-    background: url("/PWS/web/sass-website/images/iPad.svg") center/cover no-repeat;
-  }
   .navbar {
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+    padding: 0.5rem 0;
   }
   .navbar .nav {
+    margin-right: 1rem;
     display: flex;
     justify-content: space-between;
     width: 70vw;
@@ -98,23 +109,18 @@ body {
     text-decoration: none;
   }
   .navbar .nav .nav-links .nav-item {
+    filter: drop-shadow(3px 3px 4px #98dad9);
     padding: 0.5rem;
     font-weight: bold;
     font-size: 18px;
     display: inline-block;
   }
-  .navbar .nav .nav-links .nav-item:hover {
-    background: #73B8D7;
-    border-radius: 5%;
-    filter: drop-shadow(2px 2px 3px #73B8D7);
-  }
   .navbar .menu-btn-img {
     display: none;
   }
   .navbar .nav-contact-btn .contact-btn {
-    background: #73B8D7;
     border-radius: 5px;
-    filter: drop-shadow(3px 3px 4px #73B8D7);
+    filter: drop-shadow(3px 3px 4px #98dad9);
   }
 }
 .main {
@@ -144,7 +150,7 @@ body {
   padding: 0.5rem 2rem;
 }
 .main .container .main-text .title {
-  color: #73B8D7;
+  color: #2e424d;
   margin: 0;
   font-size: 30px;
   text-transform: uppercase;
@@ -168,7 +174,7 @@ body {
   margin: 0;
 }
 .card-list h2 {
-  color: #73B8D7;
+  color: #2e424d;
   font-size: 30px;
 }
 
@@ -183,7 +189,7 @@ body {
 .cards .container .card {
   width: 40vw;
   margin: 1rem 1rem;
-  background-color: #e7e7e7;
+  background-color: whitesmoke;
   border-radius: 2%;
   filter: drop-shadow(3px 5px 3px rgb(180, 180, 180));
 }
@@ -194,8 +200,12 @@ body {
 .cards .container .card a img {
   width: 100%;
 }
+.cards .container .card .pakage {
+  font-weight: 400;
+  color: rgb(128, 128, 128);
+}
 .cards .container .card p {
-  color: black;
+  color: #2e424d;
   font-weight: bold;
   margin: 0.8rem;
   line-height: 0.5rem;
@@ -204,14 +214,16 @@ body {
 footer {
   bottom: 0;
   width: 100%;
-  height: 5rem;
+  height: 50px;
 }
 footer .container {
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  background: black;
+  background: rgb(31, 28, 28);
   color: white;
-  height: 10vh;
+  height: 100%;
 }
 
 @media screen and (min-width: 950px) {
