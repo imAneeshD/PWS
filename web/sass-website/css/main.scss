@@ -26,7 +26,7 @@ body {
     z-index: 999;
     width: 100%;
     height: 40px;
-    background: $secondaryColor;
+    background: $primaryColor;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,13 +129,12 @@ body {
             }
 
             a {
-                color: black;
+                color: rgb(255, 255, 255);
                 text-decoration: none;
             }
 
             .nav-links {
                 .nav-item {
-                    filter: drop-shadow(3px 3px 4px $accentColor1);
                     padding: .5rem;
                     font-weight: bold;
                     font-size: 18px;
@@ -152,7 +151,7 @@ body {
         .nav-contact-btn {
             .contact-btn {
                 border-radius: 5px;
-                filter: drop-shadow(3px 3px 4px $accentColor1);
+               // filter: drop-shadow(3px 3px 4px $accentColor1);
             }
         }
 

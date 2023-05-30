@@ -24,7 +24,7 @@ body {
   z-index: 999;
   width: 100%;
   height: 40px;
-  background: #5b8291;
+  background: #2e424d;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -107,11 +107,10 @@ body {
     list-style-type: none;
   }
   .navbar .nav a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
   .navbar .nav .nav-links .nav-item {
-    filter: drop-shadow(3px 3px 4px #98dad9);
     padding: 0.5rem;
     font-weight: bold;
     font-size: 18px;
@@ -122,7 +121,6 @@ body {
   }
   .navbar .nav-contact-btn .contact-btn {
     border-radius: 5px;
-    filter: drop-shadow(3px 3px 4px #98dad9);
   }
 }
 .main {
