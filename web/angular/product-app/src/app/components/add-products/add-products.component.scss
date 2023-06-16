@@ -1,0 +1,36 @@
+.popup {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    background: #212529;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+    .inputs {
+
+        input {
+            background: transparent;
+            color: whitesmoke;
+            width: 80%;
+            margin: 1rem;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid;
+        }
+    }
+
+    .btns {
+        display: flex;
+        justify-content: center;
+
+        .btn {
+            background-color: whitesmoke;
+            margin: 1rem;
+            width: 90px;
+            border: 1px solid;
+            font-weight: bold;
+
+        }
+    }
+}

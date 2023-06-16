@@ -1,0 +1,25 @@
+.popup {
+    padding: 2rem 1rem;
+    background: #212529;
+    color: whitesmoke;
+    width: 300px;
+    border-radius: 10px;
+
+    .btns {
+        display: flex;
+        justify-content: center;
+
+        .btn {
+            background-color: whitesmoke;
+            margin: 1rem;
+            width: 90px;
+            border: 1px solid;
+            font-weight: bold;
+
+            &:hover {
+                color: #212529;
+            }
+        }
+
+    }
+}

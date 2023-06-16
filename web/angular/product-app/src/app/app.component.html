@@ -1,0 +1,30 @@
+<div class="my-navbar">
+  <div class="container navbar">
+    <div class="logo-text">
+      <h2>Product Apllication</h2>
+    </div>
+    <div class="nav-items">
+      <ul class="d-flex">
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="main-contents d-flex">
+    <div class="sidebar">
+      <app-sidebar (listStatus)="changeListStatus()"></app-sidebar>
+    </div>
+    <div *ngIf="!showList">
+      <div class="content">
+        <h2>Welcome to Product Application</h2>
+        <p>Explore the Products</p>
+      </div>
+    </div>
+    <div class="list-products"  *ngIf="showList">
+      <app-list-products></app-list-products>
+    </div>
+</div>
+</div>
