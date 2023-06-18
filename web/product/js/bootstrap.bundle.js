@@ -52,7 +52,7 @@
 
     prev(element, selector) {
       let previous = element.previousElementSibling;
-
+      
       while (previous) {
         if (previous.matches(selector)) {
           return [previous];

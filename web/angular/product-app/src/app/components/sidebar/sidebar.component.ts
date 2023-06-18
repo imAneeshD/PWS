@@ -6,43 +6,59 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  @Output() listStatus=new EventEmitter<boolean>();
-  status=false
-  others=false
-  services=false
+  @Output() listStatus = new EventEmitter<boolean>();
+  @Output() servicesStatus = new EventEmitter<boolean>();
+  @Output() othersStatus = new EventEmitter<boolean>();
+
+  status = false
+  others = false
+  services = false
+
   
-  showOthers(){
-    const other = document.getElementById("others") as HTMLElement;
-    // if(this.others==false){
-    //   this.others=true
-    //   other.style.fontWeight = "bold"
-    // }else{
-    //   this.status=false
-    //   other.style.fontWeight = "normal"
-    // }
-  }
-  
-  showServices(){
-    const services = document.getElementById("services") as HTMLElement;
-    // this.status = false
-    // services.style.fontWeight = "bold"
+
+
+
+
+
+  showOthers() {
+
+    if (this.others == false) {
+      this.others = true
+      this.status = false
+      this.services = false
+    } else {
+      this.others = false
+    }
+    this.othersStatus.emit(this.others)
 
   }
 
+  showServices() {
 
 
-  showProductList(){
-    const item=document.getElementById("items") as HTMLElement;
+    if (this.services == false) {
+      this.services = true
+      this.status=false
+      this.others=false
+    } else {
+      this.services = false
+    }
+    this.servicesStatus.emit(this.services)
 
-   if(this.status==false){
-    this.status=true
-    item.style.fontWeight="bold"
-   }
-   else{
-    this.status=false
-     item.style.fontWeight = "normal"
-   }
-   this.listStatus.emit(this.status)
+  }
+
+  showProductList() {
+
+    if (this.status == false) {
+      this.status = true
+      this.services=false
+      this.others = false
+
+    }
+    else {
+      this.status = false
+    }
+    this.listStatus.emit(this.status)
   }
 
 }

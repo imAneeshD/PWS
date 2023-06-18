@@ -8,12 +8,25 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'product-app';
   showList=false
+  services=false
 
   changeListStatus(){
     if(this.showList==false){
       this.showList=true
+      this.services=false
     }else{
       this.showList=false
     }
   }
+
+
+  changeServiceStatus(){
+    if (this.services == false) {
+      this.showList=false
+      this.services = true
+    } else {
+      this.services = false
+    }
+  }
+
 }

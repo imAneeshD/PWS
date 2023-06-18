@@ -6,6 +6,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AddProductsComponent } from './components/add-products/add-products.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { DeleteProductsComponent } from './components/delete-products/delete-products.component';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { DeleteProductsComponent } from './components/delete-products/delete-pro
     AddProductsComponent,
     ListProductsComponent,
     DeleteProductsComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule

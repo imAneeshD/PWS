@@ -15,9 +15,9 @@
 <div class="container">
 <div class="main-contents d-flex">
     <div class="sidebar">
-      <app-sidebar (listStatus)="changeListStatus()"></app-sidebar>
+      <app-sidebar (servicesStatus)="changeServiceStatus()" (listStatus)="changeListStatus()"></app-sidebar>
     </div>
-    <div *ngIf="!showList">
+    <div *ngIf="!showList && !services"  >
       <div class="content">
         <h2>Welcome to Product Application</h2>
         <p>Explore the Products</p>
@@ -25,6 +25,9 @@
     </div>
     <div class="list-products"  *ngIf="showList">
       <app-list-products></app-list-products>
+    </div>
+    <div  class="services" *ngIf="services">
+      <app-services ></app-services>
     </div>
 </div>
 </div>

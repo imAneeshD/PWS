@@ -1,5 +1,5 @@
 <ul>
-    <li class="items" id="items" (click)="showProductList()">Products</li>
-    <li class="items" id="services" (click)="showServices()">Services</li>
-    <li class="items" id="others" (click)="showOthers()">Others</li>
+    <li class="items" [ngClass]="{'active':status}"  id="items" (click)="showProductList()">Products</li>
+    <li class="items" [ngClass]="{'active':services}"  id="services" (click)="showServices()">Services</li>
+    <li class="items"  id="others" >Others</li>
 </ul>
