@@ -14,11 +14,6 @@ export class SidebarComponent {
   others = false
   services = false
 
-  
-
-
-
-
 
   showOthers() {
 
@@ -53,7 +48,6 @@ export class SidebarComponent {
       this.status = true
       this.services=false
       this.others = false
-
     }
     else {
       this.status = false

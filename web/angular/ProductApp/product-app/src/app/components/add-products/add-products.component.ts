@@ -31,7 +31,6 @@ export class AddProductsComponent {
     };
 
     this.newData.emit(data)
-
   }
 
   cancel() {
